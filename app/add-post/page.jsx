@@ -37,7 +37,8 @@ export default function AddPost(){
 
     return (
         <main className={styles.main}>
-            <Link href={'/'}>View Feed</Link>
+            <Link href={'/'}>Startseite</Link> <br></br>
+            <Link href={'/feed'}>View Feed</Link>
         <h1>Add Post</h1>
         <form onSubmit={handleSubmit}>
         <div>

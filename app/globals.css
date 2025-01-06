@@ -1,41 +1,134 @@
+/* Allgemeine Einstellungen */
 body {
-  font-family: Arial, sans-serif;
-  background-color: #e8f5e9;
-  color: #333;
+  font-family: Libre Baskerville;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
 }
 
+/* Navbar */
 .navbar {
-  background-color: #4caf50;
-  color: white;
-  padding: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 50px;
+  background-color: #4F633F;
+  color: #D6E8C4;
 }
 
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #D6E8C4;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Hero-Bereich */
 .hero {
-  text-align: center;
-  padding: 50px;
-  background: #a5d6a7;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #D6E8C4;
+  padding: 20vh;
+  min-height: 100vh;
 }
 
-.hero h1 {
-  font-size: 2em;
-  color: #333;
+.hero-content h1 {
+  font-size: 5rem;
+  color: #4F633F;
 }
 
-button {
+.cta-button {
+  display: inline-block;
+  background-color: #4F633F;
+  color: #D6E8C4;
   padding: 10px 20px;
-  background-color: #4caf50;
-  color: white;
-  border: none;
+  text-decoration: none;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
-button:hover {
-  background-color: #388e3c;
+.hero-image img {
+  max-width: 100%;
+  border-radius: 0px;
+  border-bottom-left-radius: 25%;
+}
+
+/* Popup */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.popup-content {
+  background: #D6E8C4;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  width: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Reise eines Kleidungsstücks */
+.reise-section {
+  padding: 50px;
+  background-color: #D6E8C4;
+}
+
+.reise-steps {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.reise-step {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.5s ease;
+}
+
+/* Infografik */
+.infografik-section {
+  padding: 50px;
+  background-color: #D6E8C4;
+  text-align: center;
+}
+
+.puzzle {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.puzzle-piece {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Beispiel CSS */
+body {
+  cursor: url('icons8-tshirt-32.png') , auto;
 }
 
