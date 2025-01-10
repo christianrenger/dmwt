@@ -109,6 +109,7 @@ body {
   transition: all 0.5s ease;
 }
 
+
 /* Infografik */
 .infografik-section {
   padding: 50px;
@@ -127,8 +128,50 @@ body {
   cursor: pointer;
 }
 
-/* Beispiel CSS */
+
 body {
   cursor: url('icons8-tshirt-32.png') , auto;
 }
+/* General Container for the rows */
+.container {
+  max-width: 1200px; /* Adjust the width as per your design */
+  margin: 0 auto;
+  padding: 20px;
+}
 
+/* General Container for the rows */
+.container {
+  max-width: 1200px; /* Adjust the width as per your design */
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Flexbox row that holds an image and text */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px; /* Space between the rows */
+}
+
+/* Image styling */
+.image {
+  width: 45%; /* Adjust the image width */
+  height: auto;
+}
+
+/* Text styling */
+.text {
+  width: 45%; /* Adjust the text width */
+  font-size: 1.2rem;
+}
+
+/* Odd sections (1st, 3rd, 5th, etc.): Image on the right, text on the left */
+.row.odd {
+  flex-direction: row-reverse; /* Reverse the order: image on the right, text on the left */
+}
+
+/* Even sections (2nd, 4th, 6th, etc.): Image on the left, text on the right */
+.row.even {
+  flex-direction: row; /* Regular order: image on the left, text on the right */
+}
