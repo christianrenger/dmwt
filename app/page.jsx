@@ -87,7 +87,8 @@ export default function Home() {
                 <div className="hero-content">
                     <h1>Trage, Was Die Welt Verändert!</h1>
                     <p>
-                        „Jeder Kauf ist ein kleiner Schritt in Richtung einer nachhaltigeren Zukunft. Werde Teil der Veränderung!“
+                        „Jeder Kauf ist ein kleiner Schritt in Richtung einer nachhaltigeren Zukunft. Werde Teil der
+                        Veränderung!“
                     </p>
                     <button className="cta-button">Mehr Informationen</button>
                 </div>
@@ -101,145 +102,179 @@ export default function Home() {
                 </div>
             </header>
 
-            {/* Content Sections */}
-            <main className="main-content">
-                <section className="content-section fade-in">
-                    <h2>Rohstoffe gewinnen</h2>
-                    <div className="container">
-                        <div className="row odd">
-                            <p className="text">
-                                Hier werden die natürlichen oder synthetischen Materialien für die Herstellung von Stoffen
-                                beschafft. Das können Baumwolle, Wolle, Leinen oder synthetische Fasern wie Polyester sein.
+            <section className="content-section fade-in">
+                <div className="container">
+                    <div className="row odd">
+                        <div className="text">
+                            <div className="colored-text-container">
+                            <h2>Rohstoffe gewinnen</h2>
+                            <p>
+                                Hier werden die natürlichen oder synthetischen Materialien für die Herstellung von
+                                Stoffen
+                                beschafft. Das können Baumwolle, Wolle, Leinen oder synthetische Fasern wie Polyester
+                                sein.
                             </p>
-                            <Image
-                                src="/baumwolle-icon 1.svg"
-                                alt="Nachhaltige Materialien"
-                                width={400}
-                                height={300}
-                                className="image"
-                            />
                         </div>
+                        </div>
+                        <Image
+                            src="/baumwolle-icon 1.svg"
+                            alt="Nachhaltige Materialien"
+                            width={400}
+                            height={300}
+                            className="image"
+                        />
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section className="content-section fade-in">
-                    <h2>Faserverarbeitung</h2>
-                    <div className="container">
-                        <div className="row even">
-                            <Image
-                                src="/threads-icon 1.svg"
-                                alt="Nachhaltige Produktion"
-                                width={400}
-                                height={300}
-                                className="image"
-                            />
-                            <p className="text">
-                                In diesem Schritt werden die gewonnenen Rohstoffe zu Fasern verarbeitet, die dann zu Garnen
+            <section className="content-section fade-in">
+                <div className="container">
+                    <div className="row even">
+                        <div className="text">
+                            <div className="colored-text-container">
+                            <h2>Faserverarbeitung</h2>
+                            <p>
+                                In diesem Schritt werden die gewonnenen Rohstoffe zu Fasern verarbeitet, die dann zu
+                                Garnen
                                 gesponnen werden. Bei natürlichen Fasern geschieht dies durch Kardieren und Spinnen.
                             </p>
+                                </div>
                         </div>
+                        <Image
+                            src="/threads-icon 1.svg"
+                            alt="Nachhaltige Produktion"
+                            width={400}
+                            height={300}
+                            className="image"
+                        />
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section className="content-section fade-in">
-                    <h2>Textilproduktion</h2>
-                    <div className="container">
-                        <div className="row odd">
-                            <p className="text">
-                                Die gesponnenen Fasern werden zu Stoffen gewebt oder gestrickt. Es entstehen so die Textilien,
+            <section className="content-section fade-in">
+                <div className="container">
+                    <div className="row odd">
+                        <div className="text">
+                            <div className="colored-text-container">
+                            <h2>Textilproduktion</h2>
+                            <p>
+                                Die gesponnenen Fasern werden zu Stoffen gewebt oder gestrickt. Es entstehen so die
+                                Textilien,
                                 die dann für die Bekleidung verwendet werden.
                             </p>
-                            <Image
-                                src="/weaving 1.svg"
-                                alt="Recycling und Wiederverwendung"
-                                width={400}
-                                height={300}
-                                className="image"
-                            />
+                            </div>
                         </div>
+                        <Image
+                            src="/weaving 1.svg"
+                            alt="Recycling und Wiederverwendung"
+                            width={400}
+                            height={300}
+                            className="image"
+                        />
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section className="content-section fade-in">
-                    <h2>Färben und Veredeln</h2>
-                    <div className="container">
-                        <div className="row even">
-                            <Image
-                                src="/threads-dyeing 1.svg"
-                                alt="Recycling und Wiederverwendung"
-                                width={400}
-                                height={300}
-                                className="image"
-                            />
-                            <p className="text">
+            <section className="content-section fade-in">
+                <div className="container">
+                    <div className="row even">
+                        <div className="text">
+                            <div className="colored-text-container">
+                            <h2>Färben und Veredeln</h2>
+                            <p>
                                 Der Stoff wird gefärbt, um ihm die gewünschte Farbe zu geben. Außerdem können spezielle
-                                Veredelungen wie z.B. Imprägnierungen oder Waschprozesse erfolgen, um den Stoff zu verbessern
+                                Veredelungen wie z.B. Imprägnierungen oder Waschprozesse erfolgen, um den Stoff zu
+                                verbessern
                                 (z.B. für weichere Haptik oder bessere Pflegeeigenschaften).
                             </p>
+                            </div>
                         </div>
+                        <Image
+                            src="/threads-dyeing 1.svg"
+                            alt="Recycling und Wiederverwendung"
+                            width={400}
+                            height={300}
+                            className="image"
+                        />
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section className="content-section fade-in">
-                    <h2>Zuschnitt</h2>
-                    <div className="container">
-                        <div className="row odd">
-                            <p className="text">
-                                In dieser Phase wird der Stoff in die benötigten Teile für das Kleidungsstück zugeschnitten.
+            <section className="content-section fade-in">
+                <div className="container">
+                    <div className="row odd">
+                        <div className="text">
+                            <div className="colored-text-container">
+                            <h2>Zuschnitt</h2>
+                            <p>
+                                In dieser Phase wird der Stoff in die benötigten Teile für das Kleidungsstück
+                                zugeschnitten.
                                 Dies erfolgt meist nach einem Schnittmuster.
                             </p>
-                            <Image
-                                src="/cutting-fabric 1.svg"
-                                alt="Recycling und Wiederverwendung"
-                                width={400}
-                                height={300}
-                                className="image"
-                            />
                         </div>
+                        </div>
+                        <Image
+                            src="/cutting-fabric 1.svg"
+                            alt="Recycling und Wiederverwendung"
+                            width={400}
+                            height={300}
+                            className="image"
+                        />
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section className="content-section fade-in">
-                    <h2>Nähen</h2>
-                    <div className="container">
-                        <div className="row even">
-                            <Image
-                                src="/fabric-sewing 1.svg"
-                                alt="Recycling und Wiederverwendung"
-                                width={400}
-                                height={300}
-                                className="image"
-                            />
-                            <p className="text">
+            <section className="content-section fade-in">
+                <div className="container">
+                    <div className="row even">
+                        <div className="text">
+                            <div className="colored-text-container">
+                            <h2>Nähen</h2>
+                            <p>
                                 Die zugeschnittenen Teile werden mit Nähmaschinen oder per Hand zu einem Kleidungsstück
-                                zusammengenäht. Hierbei werden auch Reißverschlüsse, Knöpfe oder andere Details hinzugefügt.
+                                zusammengenäht. Hierbei werden auch Reißverschlüsse, Knöpfe oder andere Details
+                                hinzugefügt.
                             </p>
                         </div>
+                        </div>
+                        <Image
+                            src="/fabric-sewing 1.svg"
+                            alt="Recycling und Wiederverwendung"
+                            width={400}
+                            height={300}
+                            className="image"
+                        />
                     </div>
-                </section>
+                </div>
+            </section>
 
-                <section className="content-section fade-in">
-                    <h2>Vertrieb und Verkauf</h2>
-                    <div className="container">
-                        <div className="row odd">
-                            <p className="text">
-                                Das fertige Kleidungsstück wird an Händler, Boutiquen oder in Onlineshops geliefert und zum
+            <section className="content-section fade-in">
+                <div className="container">
+                    <div className="row odd">
+                        <div className="text">
+                            <div className="colored-text-container">
+                            <h2>Vertrieb und Verkauf</h2>
+                            <p>
+                                Das fertige Kleidungsstück wird an Händler, Boutiquen oder in Onlineshops geliefert und
+                                zum
                                 Verkauf angeboten, damit die Endverbraucher es kaufen können.
                             </p>
-                            <Image
-                                src="/clothes-icon 1.svg"
-                                alt="Recycling und Wiederverwendung"
-                                width={400}
-                                height={300}
-                                className="image"
-                            />
+                            </div>
                         </div>
+                        <Image
+                            src="/clothes-icon 1.svg"
+                            alt="Recycling und Wiederverwendung"
+                            width={400}
+                            height={300}
+                            className="image"
+                        />
                     </div>
-                </section>
-            </main>
+                </div>
+            </section>
 
 
-            {/* Infografik */}
+            {/* Infografik */
+            }
             <section id="infografik" className="infografik-section">
                 <h2>Infografik: Puzzle</h2>
                 <div className="puzzle">
@@ -249,18 +284,18 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Unsere Wahl Section */}
+            {/* Unsere Wahl Section */
+            }
             <section id="unsere-wahl">
                 <h1>Unsere Wahl für nachhaltige Mode</h1>
                 <p>Erfahre mehr über unsere Auswahl an nachhaltiger Kleidung.</p>
-      </section>
+            </section>
 
 
-
-      <footer>
-        <p>&copy; 2023 Secondhand. Alle Rechte vorbehalten.</p>
-      </footer>
-    </div>
-  );
+            <footer>
+                <p>&copy; 2023 Secondhand. Alle Rechte vorbehalten.</p>
+            </footer>
+        </div>
+    );
 
 }
