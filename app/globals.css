@@ -130,18 +130,43 @@ body {
 
 
 body {
-  cursor: url('icons8-tshirt-32.png') , auto;
-  background-color: #D6E8C4;
-  background-image:
-          url('public/Rectangle 26.svg'), /* Dotted pattern */
-          url('public/Rectangle 27.svg'), /* Scattered squares */
-          url('public/Group 21.svg');
-          url('public/Group 21.svg');
-  background-repeat: repeat, no-repeat, no-repeat; /* Customize repeat */
-  background-size: auto, 200px, cover; /* Adjust sizes */
-  background-position: center, top left, center; /* Customize position */
-  overflow-x: hidden; /* Prevent horizontal scrolling from background */
+  background-color: #d6e8c4; /* Light green base */
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
+
+.background-element {
+  position: absolute;
+  opacity: 0.8; /* Optional for a subtle look */
+}
+
+.element-1 {
+  top: 10%;
+  left: 5%;
+  width: 150px; /* Adjust size */
+}
+
+.element-2 {
+  top: 30%;
+  right: 10%;
+  width: 100px;
+}
+
+.element-3 {
+  bottom: 15%;
+  left: 20%;
+  width: 200px;
+}
+
+.element-4 {
+  top: 50%;
+  right: 5%;
+  width: 120px;
+}
+
+/* Add more classes for additional scattered elements */
+
+
 
 .container {
   max-width: 1200px;
