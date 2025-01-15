@@ -1,26 +1,31 @@
-
+"use client";
 import Image from 'next/image';
 import Link from 'next/link';
+import { useEffect } from "react";
 
 export default function Home() {
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                    }
+                });
+            },
+            { threshold: 0.1 } // Trigger when 10% of the section is visible
+        );
+
+        const sections = document.querySelectorAll(".fade-in");
+        sections.forEach((section) => observer.observe(section));
+
+        return () => {
+            sections.forEach((section) => observer.unobserve(section));
+        };
+    }, []);
+
     return (
         <div>
-            {/* Scattered Background Elements */}
-            <div className="background-elements">
-                <div className="background-element element-1">
-                    <img src="/Rectangle%2026.svg" alt="Decorative Element 1" />
-                </div>
-                <div className="background-element element-2">
-                    <img src="/Rectangle%2027.svg" alt="Decorative Element 2" />
-                </div>
-                <div className="background-element element-3">
-                    <img src="/Group%2021.svg" alt="Decorative Element 3" />
-                </div>
-                <div className="background-element element-4">
-                    <img src="/wave.svg" alt="Decorative Element 4" />
-                </div>
-            </div>
-
             {/* Navbar */}
             <nav className="navbar">
                 <div className="logo">Secondhand</div>
