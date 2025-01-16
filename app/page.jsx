@@ -1,7 +1,8 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect } from "react";
+import {useEffect} from "react";
+
 
 export default function Home() {
     useEffect(() => {
@@ -13,7 +14,7 @@ export default function Home() {
                     }
                 });
             },
-            { threshold: 0.1 } // Trigger when 10% of the section is visible
+            {threshold: 0.1} // Trigger when 10% of the section is visible
         );
 
         const sections = document.querySelectorAll(".fade-in");
@@ -34,6 +35,7 @@ export default function Home() {
             const heroContent = document.querySelector('.hero-section');
             const bodySection = document.querySelector('.content-section');
 
+
             if (heroImage) {
                 // Slower movement for the hero section elements
                 heroImage.style.transform = `translateY(${scrollPosition * 0.2}px)`;
@@ -52,6 +54,7 @@ export default function Home() {
             if (bodySection) {
                 bodySection.style.marginTop = `${-scrollPosition * 0.1}px`; // Control speed of body section
             }
+
         };
         window.addEventListener('scroll', handleScroll);
 
@@ -64,9 +67,11 @@ export default function Home() {
 
     return (
         <div>
-            {/* Navbar */}
             <nav className="navbar">
-                <div className="logo">Secondhand</div>
+                <div className="logo">
+                    <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon"/>
+                    <span>Revivo</span>
+                </div>
                 <ul className="nav-links">
                     <Link href={'/feed'}>Community-Feed</Link>
                     <li><a href="#startseite">Startseite</a></li>
@@ -75,12 +80,12 @@ export default function Home() {
                 </ul>
             </nav>
 
-
             {/* Hero Section */}
             <header id="startseite" className="hero">
                 <div className="hero-square">
                     <span className="square-text"></span>
                 </div>
+
                 <div className="hero-content">
                     <h1>Trage, Was Die Welt Verändert!</h1>
                     <p>
@@ -89,6 +94,7 @@ export default function Home() {
                     </p>
                     <button className="cta-button">Mehr Informationen</button>
                 </div>
+                <div className="wave"></div>
                 <div className="hero-image">
                     <Image
                         src="/frau.jpg"
@@ -106,14 +112,15 @@ export default function Home() {
                     <div className="row odd">
                         <div className="text">
                             <div className="colored-text-container">
-                            <h2>Rohstoffe gewinnen</h2>
-                            <p>
-                                Hier werden die natürlichen oder synthetischen Materialien für die Herstellung von
-                                Stoffen
-                                beschafft. Das können Baumwolle, Wolle, Leinen oder synthetische Fasern wie Polyester
-                                sein.
-                            </p>
-                        </div>
+                                <h2>Rohstoffe gewinnen</h2>
+                                <p>
+                                    Hier werden die natürlichen oder synthetischen Materialien für die Herstellung von
+                                    Stoffen
+                                    beschafft. Das können Baumwolle, Wolle, Leinen oder synthetische Fasern wie
+                                    Polyester
+                                    sein.
+                                </p>
+                            </div>
                         </div>
                         <Image
                             src="/baumwolle-icon 1.svg"
@@ -131,13 +138,13 @@ export default function Home() {
                     <div className="row even">
                         <div className="text">
                             <div className="colored-text-container">
-                            <h2>Faserverarbeitung</h2>
-                            <p>
-                                In diesem Schritt werden die gewonnenen Rohstoffe zu Fasern verarbeitet, die dann zu
-                                Garnen
-                                gesponnen werden. Bei natürlichen Fasern geschieht dies durch Kardieren und Spinnen.
-                            </p>
-                                </div>
+                                <h2>Faserverarbeitung</h2>
+                                <p>
+                                    In diesem Schritt werden die gewonnenen Rohstoffe zu Fasern verarbeitet, die dann zu
+                                    Garnen
+                                    gesponnen werden. Bei natürlichen Fasern geschieht dies durch Kardieren und Spinnen.
+                                </p>
+                            </div>
                         </div>
                         <Image
                             src="/threads-icon 1.svg"
@@ -152,15 +159,18 @@ export default function Home() {
 
             <section className="content-section fade-in">
                 <div className="container">
+                    <div className="wave-container">
+                        <div className="wave"></div>
+                    </div>
                     <div className="row odd">
                         <div className="text">
                             <div className="colored-text-container">
-                            <h2>Textilproduktion</h2>
-                            <p>
-                                Die gesponnenen Fasern werden zu Stoffen gewebt oder gestrickt. Es entstehen so die
-                                Textilien,
-                                die dann für die Bekleidung verwendet werden.
-                            </p>
+                                <h2>Textilproduktion</h2>
+                                <p>
+                                    Die gesponnenen Fasern werden zu Stoffen gewebt oder gestrickt. Es entstehen so die
+                                    Textilien,
+                                    die dann für die Bekleidung verwendet werden.
+                                </p>
                             </div>
                         </div>
                         <Image
@@ -179,13 +189,14 @@ export default function Home() {
                     <div className="row even">
                         <div className="text">
                             <div className="colored-text-container">
-                            <h2>Färben und Veredeln</h2>
-                            <p>
-                                Der Stoff wird gefärbt, um ihm die gewünschte Farbe zu geben. Außerdem können spezielle
-                                Veredelungen wie z.B. Imprägnierungen oder Waschprozesse erfolgen, um den Stoff zu
-                                verbessern
-                                (z.B. für weichere Haptik oder bessere Pflegeeigenschaften).
-                            </p>
+                                <h2>Färben und Veredeln</h2>
+                                <p>
+                                    Der Stoff wird gefärbt, um ihm die gewünschte Farbe zu geben. Außerdem können
+                                    spezielle
+                                    Veredelungen wie z.B. Imprägnierungen oder Waschprozesse erfolgen, um den Stoff zu
+                                    verbessern
+                                    (z.B. für weichere Haptik oder bessere Pflegeeigenschaften).
+                                </p>
                             </div>
                         </div>
                         <Image
@@ -204,13 +215,13 @@ export default function Home() {
                     <div className="row odd">
                         <div className="text">
                             <div className="colored-text-container">
-                            <h2>Zuschnitt</h2>
-                            <p>
-                                In dieser Phase wird der Stoff in die benötigten Teile für das Kleidungsstück
-                                zugeschnitten.
-                                Dies erfolgt meist nach einem Schnittmuster.
-                            </p>
-                        </div>
+                                <h2>Zuschnitt</h2>
+                                <p>
+                                    In dieser Phase wird der Stoff in die benötigten Teile für das Kleidungsstück
+                                    zugeschnitten.
+                                    Dies erfolgt meist nach einem Schnittmuster.
+                                </p>
+                            </div>
                         </div>
                         <Image
                             src="/cutting-fabric 1.svg"
@@ -225,16 +236,20 @@ export default function Home() {
 
             <section className="content-section fade-in">
                 <div className="container">
+                    <div className="wave-container">
+                        <div className="wave"></div>
+                    </div>
                     <div className="row even">
                         <div className="text">
                             <div className="colored-text-container">
-                            <h2>Nähen</h2>
-                            <p>
-                                Die zugeschnittenen Teile werden mit Nähmaschinen oder per Hand zu einem Kleidungsstück
-                                zusammengenäht. Hierbei werden auch Reißverschlüsse, Knöpfe oder andere Details
-                                hinzugefügt.
-                            </p>
-                        </div>
+                                <h2>Nähen</h2>
+                                <p>
+                                    Die zugeschnittenen Teile werden mit Nähmaschinen oder per Hand zu einem
+                                    Kleidungsstück
+                                    zusammengenäht. Hierbei werden auch Reißverschlüsse, Knöpfe oder andere Details
+                                    hinzugefügt.
+                                </p>
+                            </div>
                         </div>
                         <Image
                             src="/fabric-sewing 1.svg"
@@ -252,12 +267,13 @@ export default function Home() {
                     <div className="row odd">
                         <div className="text">
                             <div className="colored-text-container">
-                            <h2>Vertrieb und Verkauf</h2>
-                            <p>
-                                Das fertige Kleidungsstück wird an Händler, Boutiquen oder in Onlineshops geliefert und
-                                zum
-                                Verkauf angeboten, damit die Endverbraucher es kaufen können.
-                            </p>
+                                <h2>Vertrieb und Verkauf</h2>
+                                <p>
+                                    Das fertige Kleidungsstück wird an Händler, Boutiquen oder in Onlineshops geliefert
+                                    und
+                                    zum
+                                    Verkauf angeboten, damit die Endverbraucher es kaufen können.
+                                </p>
                             </div>
                         </div>
                         <Image

@@ -38,6 +38,47 @@ body {
   text-decoration: none;
   font-size: 1rem;
 }
+.logo {
+  display: flex;
+  align-items: center; /* Aligns the logo and text vertically */
+  gap: 10px; /* Adds spacing between the logo and the text */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-icon {
+  width: 70px; /* Adjust the size of your logo */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Styling for wave background */
+.wave-container {
+  position: fixed;
+  left: 0%;
+  width: 100%;
+  height: 300px; /* Set the height for the wave effect */
+  overflow: hidden; /* Prevents the wave from overflowing outside */
+  z-index: -1;
+}
+
+
+.wave {
+  --size: 50px;
+  --b: 3px;
+  --m: 0.6;
+  --p: calc(var(--m)*var(--size));
+  --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
+
+  --_g: #0000 calc(99% - var(--b)),#000 calc(101% - var(--b)) 99%,#0000 101%;
+  mask:
+          radial-gradient(var(--R) at left 50% bottom calc(-1*var(--p)),var(--_g))
+          calc(50% - 2*var(--size)) calc(50% - var(--size)/2 - var(--b)/2)/calc(4*var(--size)) calc(var(--size) + var(--b)),
+          radial-gradient(var(--R) at left 50% top    calc(-1*var(--p)),var(--_g))
+          50%                       calc(50% + var(--size)/2 + var(--b)/2)/calc(4*var(--size)) calc(var(--size) + var(--b));
+  background: linear-gradient(90deg, #000000, #384c30);
+  height: 300px;
+}
+
 
 /*!* alte Hero-Bereich *!*/
 /*.hero {*/
@@ -130,6 +171,13 @@ body {
 .hero-content p {
   font-size: 1.5rem;
 }
+.hero .wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0; /* Place it behind the content */
+}
 
 .cta-button {
   display: inline-block;
@@ -163,10 +211,10 @@ body {
 }
 .hero-square {
   position: absolute;
-  top: 0.1%; /* Vertikal zentrieren */
-  right: 0.1%; /* Horizontal zentrieren */
-  width: 500px; /* Größe des Quadrats */
-  height: 500px; /* Größe des Quadrats */
+  top: 0.9%; /* Vertikal zentrieren */
+  right: 0.9%; /* Horizontal zentrieren */
+  width: 300px; /* Größe des Quadrats */
+  height: 300px; /* Größe des Quadrats */
   background-image: radial-gradient(circle, #4F633F 1px, transparent 1px);
   background-size: 30px 30px; /* Größe der Punkte */
   background-position: center ;
@@ -190,6 +238,7 @@ body {
   background-color: #d6e8c4; /* Light green base */
   padding: 60px 20px; /* Padding to give space for the fixed hero content */
   z-index: 2;
+  overflow: hidden;
 }
 
 /* Popup */
@@ -258,24 +307,21 @@ body {
 
 
 
-.background-element {
-  position: absolute;
-}
-
-
-
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
+
 }
+
 .colored-text-container {
   background-color: #4f633f; /* Light gray background for the text */
   padding: 20px; /* Add space inside the container */
   border-radius: 10px; /* Rounded corners for a modern look */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border: 1px solid #4f633f; /* Optional: border for better definition */
+  z-index: 1;
 }
 .colored-text-container h2 {
   color: #faebd8; /* Example: blue heading */
