@@ -1,9 +1,15 @@
+
 /* Allgemeine Einstellungen */
 body {
-  font-family: Libre Baskerville;
+  font-family: Libre Baskerville, serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
+  position: relative;
+  background-color: #d6e8c4;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  height: 100%; /* Ensures the body takes up the full height of the viewport */
+  scroll-behavior: smooth;
 }
 
 /* Navbar */
@@ -33,19 +39,102 @@ body {
   font-size: 1rem;
 }
 
-/* Hero-Bereich */
+/*!* alte Hero-Bereich *!*/
+/*.hero {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-between;*/
+/*  background-color: #d6e8c4;*/
+/*  padding: 0;*/
+/*  min-height: 100vh;*/
+/*  position: relative;*/
+/*  overflow: hidden;*/
+/*}*/
+/*.hero-content {*/
+/*  z-index: 2;*/
+/*  position: relative;*/
+/*  width: 100%;*/
+/*  padding: 20vh;*/
+/*  transform: translateX(-10%);*/
+/*  transition: opacity 0.2s ease-in-out;*/
+/*  }*/
+
+/*  .hero-content h1 {*/
+/*    font-size: 6rem;*/
+/*    color: #4F633F;*/
+/*  }*/
+/*  .hero-content p {*/
+/*    font-size: 1.9rem;*/
+/*    overflow-wrap: break-word;*/
+/*  }*/
+
+/*  .cta-button {*/
+/*    position: fixed;*/
+/*    display: inline-block;*/
+/*    background-color: #4F633F;*/
+/*    color: #D6E8C4;*/
+/*    padding: 10px 20px;*/
+/*    left: 400px;*/
+/*    text-decoration: none;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*  }*/
+/*  .hero-image {*/
+/*    position: absolute;*/
+/*    z-index: 1;*/
+/*    top: 250px ;*/
+/*    left: 1400px;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    transform: translateY(0); !* Initial transform *!*/
+/*    transition: opacity 0.1s ease-in-out;!* Optional smoothness during updates *!*/
+/*}*/
+/*.content-section{*/
+/*  position: relative;*/
+/*  background-color: #d6e8c4;*/
+/*  padding: 50px;*/
+/*  z-index: 1;*/
+/*}*/
+
+/*.hero-image img {*/
+/*  max-width: 100%;*/
+/*  transform: scale(1.2); !* Vergrößert das Bild um 20% *!*/
+/*  border-radius: 0px;*/
+/*  border-bottom-left-radius: 25%;*/
+/*}*/
+
+/* Hero Section */
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #D6E8C4;
-  padding: 20vh;
+  background-color: #d6e8c4;
+  padding: 0; /* Removed padding to allow full height */
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  z-index: 2;
+  position: absolute; /* Keeps the content fixed while scrolling */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 20vh;
+  text-align: center;
+  transition: opacity 0.2s ease-in-out; /* For fade out effect */
 }
 
 .hero-content h1 {
-  font-size: 5rem;
+  font-size: 6rem;
   color: #4F633F;
+}
+
+.hero-content p {
+  font-size: 1.9rem;
+  overflow-wrap: break-word;
 }
 
 .cta-button {
@@ -58,10 +147,31 @@ body {
   cursor: pointer;
 }
 
+/* Hero Image */
+.hero-image {
+  position: fixed; /* Fix the image in place */
+  top: 0;
+  left: 0;
+  z-index: 1; /* Ensure the image stays behind content */
+  width: 100%;
+  height: 100%;
+  transform: translateY(0); /* Initial position for parallax */
+  transition: opacity 0.2s ease-in-out; /* Smooth fade out */
+}
+
 .hero-image img {
-  max-width: 100%;
-  border-radius: 0px;
+  width: 100%;
+  object-fit: cover;
+  transform: scale(1.2); /* Slight zoom effect */
   border-bottom-left-radius: 25%;
+}
+
+/* Body Section */
+.content-section {
+  position: relative;
+  background-color: #d6e8c4; /* Light green base */
+  padding: 60px 20px; /* Padding to give space for the fixed hero content */
+  z-index: 2;
 }
 
 /* Popup */
@@ -109,6 +219,7 @@ body {
   transition: all 0.5s ease;
 }
 
+
 /* Infografik */
 .infografik-section {
   padding: 50px;
@@ -127,8 +238,75 @@ body {
   cursor: pointer;
 }
 
-/* Beispiel CSS */
-body {
-  cursor: url('icons8-tshirt-32.png') , auto;
+
+
+.background-element {
+  position: absolute;
 }
 
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.colored-text-container {
+  background-color: #4f633f; /* Light gray background for the text */
+  padding: 20px; /* Add space inside the container */
+  border-radius: 10px; /* Rounded corners for a modern look */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  border: 1px solid #4f633f; /* Optional: border for better definition */
+}
+.colored-text-container h2 {
+  color: #faebd8; /* Example: blue heading */
+}
+
+.colored-text-container p {
+  color: #faebd8; /* Example: slightly lighter gray for paragraph text */
+}
+
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.image, .text {
+  width: 45%;
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .text, .image {
+    width: 100%;
+  }
+}
+
+.row.odd {
+  flex-direction: row-reverse; /* Image on the right, text on the left */
+}
+
+.row.even {
+  flex-direction: row; /* Image on the left, text on the right */
+}
+
+/* Fade-in and slide-up effect */
+.fade-in {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
