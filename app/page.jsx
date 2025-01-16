@@ -24,6 +24,38 @@ export default function Home() {
         };
     }, []);
 
+    useEffect(() => {
+        // Handle scroll event to create the parallax effect
+        const handleScroll = () => {
+            const scrollPosition = window.scrollY;
+
+            // Hero section parallax effect (slower scroll)
+            const heroImage = document.querySelector('.hero-image');
+            const heroContent = document.querySelector('.hero-section');
+            const bodySection = document.querySelector('.content-section');
+
+            if (heroImage) {
+                // Slower movement for the hero section elements
+                heroImage.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+            }
+            if (heroContent) {
+                heroContent.style.transform = `translateY(${scrollPosition * 0.2}px)`;
+            }
+
+            // Fade out hero section as the body section comes over
+            if (heroImage && heroContent) {
+                const opacity = Math.max(1 - scrollPosition / 400, 0); // Fade out based on scroll
+                heroImage.style.opacity = opacity;
+            }
+
+            // Apply offset to the body section (move faster or scroll above the hero)
+            if (bodySection) {
+                bodySection.style.marginTop = `${-scrollPosition * 0.1}px`; // Control speed of body section
+            }
+        };
+
+    }, []);
+
     return (
         <div>
             {/* Navbar */}
