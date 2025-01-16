@@ -109,32 +109,26 @@ body {
   align-items: center;
   justify-content: space-between;
   background-color: #d6e8c4;
-  padding: 0; /* Removed padding to allow full height */
+  padding: 20px; /* Abstand rund um den Hero-Inhalt */
   min-height: 100vh;
   position: relative;
   overflow: hidden;
 }
 
 .hero-content {
+  flex: 1; /* Nimmt den Platz links ein */
   z-index: 2;
-  position: absolute; /* Keeps the content fixed while scrolling */
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  padding: 20vh;
-  text-align: center;
-  transition: opacity 0.2s ease-in-out; /* For fade out effect */
+  padding: 20px;
+  text-align: left; /* Text linksbündig */
 }
 
 .hero-content h1 {
-  font-size: 6rem;
+  font-size: 3rem;
   color: #4F633F;
 }
 
 .hero-content p {
-  font-size: 1.9rem;
-  overflow-wrap: break-word;
+  font-size: 1.5rem;
 }
 
 .cta-button {
@@ -149,21 +143,45 @@ body {
 
 /* Hero Image */
 .hero-image {
-  position: fixed; /* Fix the image in place */
-  top: 0;
-  left: 0;
-  z-index: 1; /* Ensure the image stays behind content */
-  width: 100%;
-  height: 100%;
-  transform: translateY(0); /* Initial position for parallax */
-  transition: opacity 0.2s ease-in-out; /* Smooth fade out */
+  flex: 0 0 45%; /* Das Bild nimmt nun 45% der Breite ein */
+  position: relative;
+  display: flex;
+  justify-content: flex-start; /* Bild nicht ganz rechts, sondern ein bisschen nach links verschieben */
+  align-items: center;
+  height: auto;
+  max-height: 100vh; /* Begrenzte Höhe des Bildes */
+  overflow: hidden;
+  margin-right:-9%;
 }
 
 .hero-image img {
   width: 100%;
-  object-fit: cover;
-  transform: scale(1.2); /* Slight zoom effect */
+  max-width: 55%;
+  border-radius: 0px;
   border-bottom-left-radius: 25%;
+
+}
+.hero-square {
+  position: absolute;
+  top: 0.1%; /* Vertikal zentrieren */
+  right: 0.1%; /* Horizontal zentrieren */
+  width: 500px; /* Größe des Quadrats */
+  height: 500px; /* Größe des Quadrats */
+  background-image: radial-gradient(circle, #4F633F 1px, transparent 1px);
+  background-size: 30px 30px; /* Größe der Punkte */
+  background-position: center ;
+  background-color: #FAEDDC; /* Hintergrundfarbe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0; /* Hinter den Inhalten der Seite */
+  opacity: 0.5; /* Optional: Etwas transparent machen */
+}
+
+.square-text {
+  font-size: 1rem;
+  color: #4F633F; /* Textfarbe */
+  font-weight: bold;
 }
 
 /* Body Section */

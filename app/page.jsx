@@ -72,6 +72,9 @@ export default function Home() {
 
             {/* Hero Section */}
             <header id="startseite" className="hero">
+                <div className="hero-square">
+                    <span className="square-text"></span>
+                </div>
                 <div className="hero-content">
                     <h1>Trage, Was Die Welt Verändert!</h1>
                     <p>
@@ -88,6 +91,8 @@ export default function Home() {
                         height={500}
                     />
                 </div>
+
+
             </header>
 
             <section className="content-section fade-in">
