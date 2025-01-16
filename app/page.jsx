@@ -53,6 +53,12 @@ export default function Home() {
                 bodySection.style.marginTop = `${-scrollPosition * 0.1}px`; // Control speed of body section
             }
         };
+        window.addEventListener('scroll', handleScroll);
+
+        // Cleanup function to remove event listener
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
 
     }, []);
 
