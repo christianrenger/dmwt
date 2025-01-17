@@ -435,6 +435,7 @@ export default function Home() {
                             </a>
                         </p>
                     </div>
+
                     <section className="counter text-center">
                         <div className="container">
                             <div className="row">

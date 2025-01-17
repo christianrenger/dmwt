@@ -10,6 +10,7 @@ body {
   overflow-x: hidden; /* Prevents horizontal scrolling */
   height: 100%; /* Ensures the body takes up the full height of the viewport */
   scroll-behavior: smooth;
+  cursor: url("icons8-tshirt-32.png") 32 32,auto;
 }
 
 /* Navbar */
@@ -186,7 +187,7 @@ body {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: url("icons8-tshirt-32.png") 32 32,auto;
 }
 
 /* Hero Image */
@@ -392,7 +393,16 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
   border: 1px solid #4f633f; /* Optional: border for better definition */
   z-index: 1;
+  transform-style: preserve-3d; /* Necessary for 3D transformations */
+  transition: transform 0.3s ease-out, box-shadow 0.3s ease-out; /* Add transition for smooth animation */
 }
+
+/* Hover effect */
+.colored-text-container:hover {
+  transform: perspective(1000px) rotateY(10deg) rotateX(10deg);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
 .colored-text-container h2 {
   color: #faebd8; /* Example: blue heading */
 }
