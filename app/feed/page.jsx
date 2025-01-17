@@ -10,7 +10,7 @@ async function getPosts(){
     where: {published: true},
     include: {
       author: {
-        select: {name: true}
+        select: {username: true}
       }
     }
   })
@@ -34,9 +34,9 @@ export default async function Home() {
               <Post
               key={post.id}
               id={post.id}
+              username={post.author.username}
               title={post.title}
               content={post.content}
-              authorName={post.author.name}
               />
             )
           })

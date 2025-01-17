@@ -10,6 +10,8 @@ export default function LoginPage() {
 
   const handleLogin = async (e) => {
     e.preventDefault()
+    setError('')
+
     try {
       const res = await fetch('/api/login', {
         method: 'POST',
@@ -18,7 +20,10 @@ export default function LoginPage() {
         },
         body: JSON.stringify({ username, password }),
       })
+      const data = await res.json()
       if (res.ok) {
+        localStorage.setItem('token', data.token)
+        console.log('Stored Token:', localStorage.getItem('token'))
         window.location.href = '/add-post'
       } else {
         setError('Login failed')
