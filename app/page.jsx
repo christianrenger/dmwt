@@ -299,16 +299,134 @@ export default function Home() {
                 </div>
             </section>
 
+
+
             {/* Unsere Wahl Section */
             }
-            <section id="unsere-wahl">
+            <section id="unsere-wahl"
+                     style={{
+                         backgroundColor: "#E2EACC",
+                         padding: "40px 20px",
+
+                     }}
+            >
                 <h1>Unsere Wahl für nachhaltige Mode</h1>
                 <p>Erfahre mehr über unsere Auswahl an nachhaltiger Kleidung.</p>
             </section>
 
 
             <footer>
-                <p>&copy; 2023 Secondhand. Alle Rechte vorbehalten.</p>
+                <footer style={{backgroundColor: "#E2EACC", padding: "20px 0"}}>
+                    <div className="footer-container">
+                        {/* Bild 1 */}
+                        <a href="https://www.avocadostore.de/" target="_blank" rel="noopener noreferrer">
+                            <img
+                                src="/bild1.png"
+                                alt="Bild 1"
+                                className="footer-image"
+                                style={{width: "200px", height: "auto", margin: "0 10px", borderRadius: "8px"}}
+                            />
+                        </a>
+
+                        {/* Bild 2 */}
+                        <a href="https://www.glore.de/" target="_blank" rel="noopener noreferrer">
+                            <img
+                                src="/bild2.png"
+                                alt="Bild 2"
+                                className="footer-image"
+                                style={{width: "200px", height: "auto", margin: "0 10px", borderRadius: "8px"}}
+                            />
+                        </a>
+
+                        {/* Bild 3 */}
+                        <a href="https://www.greenality.de/" target="_blank" rel="noopener noreferrer">
+                            <img
+                                src="/bild3.png"
+                                alt="Bild 3"
+                                className="footer-image"
+                                style={{width: "200px", height: "auto", margin: "0 10px", borderRadius: "8px"}}
+                            />
+                        </a>
+
+                        {/* Bild 4 */}
+                        <a href="https://marlowe-nature.de/?srsltid=AfmBOoqSoliRVFlb5ooN5Pzbt94Bpoipmetk_dgqRg7ttigE5-deNQ9q"
+                           target="_blank" rel="noopener noreferrer">
+                            <img
+                                src="/bild4.png"
+                                alt="Bild 4"
+                                className="footer-image"
+                                style={{width: "200px", height: "auto", margin: "0 10px", borderRadius: "8px"}}
+                            />
+                        </a>
+                    </div>
+                    {/* Community-Bereich */}
+                    <div className="community-section" style={{textAlign: "center", marginTop: "20px"}}>
+                        <p style={{fontSize: "25px", color: "black", fontWeight: "bold"}}>Sei Teil unserer
+                            Community!</p>
+                        <button
+                            style={{
+                                backgroundColor: "#4F633F",
+                                color: "#FFFFFF",
+                                padding: "10px 20px",
+                                fontSize: "19px",
+                                borderRadius: "5px",
+                                border: "none",
+                                cursor: "pointer",
+                                transition: "transform 0.2s ease",
+                            }}
+                            onMouseOver={(e) => (e.target.style.transform = "scale(1.05)")}
+                            onMouseOut={(e) => (e.target.style.transform = "scale(1)")}
+                        >
+                            Jetzt Registrieren
+                        </button>
+                    </div>
+
+                    <div style={{textAlign: "center", width: "100%"}}>
+                        <p
+                            style={{
+                                fontFamily: "'Libre Baskerville', serif",
+                                fontSize: "16px",
+                                fontWeight: "bold",
+                                textRendering: "optimizeLegibility",
+                                WebkitFontSmoothing: "antialiased", // Korrekte Schreibweise
+                            }}
+                        >
+                            <a href="/community" style={{color: "inherit", textDecoration: "none", margin: "0 10px"}}>
+                                Community
+                            </a>
+                            |
+                            <a href="/impressum" style={{color: "inherit", textDecoration: "none", margin: "0 10px"}}>
+                                Impressum
+                            </a>
+                            |
+                            <a href="/follow-us" style={{color: "inherit", textDecoration: "none", margin: "0 10px"}}>
+                                Follow Us
+                            </a>
+                        </p>
+                    </div>
+
+
+                    <style jsx>{`
+                        .footer-container {
+                            display: flex;
+                            justify-content: space-around;
+                            align-items: center;
+                        }
+
+                        .footer-image {
+                            width: 100px;
+                            height: 100px;
+                            object-fit: cover;
+                            border-radius: 10px; /* Optional: Rundung */
+                            transition: transform 0.3s ease;
+                        }
+
+                        .footer-image:hover {
+                            transform: scale(1.1);
+                        }
+                    `}</style>
+                </footer>
+
             </footer>
         </div>
     );
