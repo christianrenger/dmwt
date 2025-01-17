@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-import {useEffect} from "react";
+import {useState, useEffect} from "react";
 
 
 export default function Home() {
@@ -113,7 +113,7 @@ export default function Home() {
 
             {/* Hero Section */}
             <header id="startseite" className="hero">
-                <div className="hero-square">
+                <div className="hero-square1">
                     <span className="square-text"></span>
                 </div>
 
@@ -140,7 +140,7 @@ export default function Home() {
 
             <section className="content-section fade-in">
                 <div className="container">
-                    <div className="row odd">
+                <div className="row odd">
                         <div className="text">
                             <div className="colored-text-container">
                                 <h2>Rohstoffe gewinnen</h2>
@@ -338,6 +338,10 @@ export default function Home() {
                      style={{
                          backgroundColor: "#E2EACC",
                          padding: "40px 20px",
+                         display: "flex",         // Aktiviert Flexbox
+                         flexDirection: "column", // Elemente werden vertikal angeordnet
+                         alignItems: "center",    // Zentriert horizontal
+                         justifyContent: "center" // Zentriert vertikal
 
                      }}
             >
@@ -412,29 +416,6 @@ export default function Home() {
                         </button>
                     </div>
 
-                    <div style={{textAlign: "center", width: "100%"}}>
-                        <p
-                            style={{
-                                fontFamily: "'Libre Baskerville', serif",
-                                fontSize: "16px",
-                                fontWeight: "bold",
-                                textRendering: "optimizeLegibility",
-                                WebkitFontSmoothing: "antialiased", // Korrekte Schreibweise
-                            }}
-                        >
-                            <a href="/community" style={{color: "inherit", textDecoration: "none", margin: "0 10px"}}>
-                                Community
-                            </a>
-                            |
-                            <a href="/impressum" style={{color: "inherit", textDecoration: "none", margin: "0 10px"}}>
-                                Impressum
-                            </a>
-                            |
-                            <a href="/follow-us" style={{color: "inherit", textDecoration: "none", margin: "0 10px"}}>
-                                Follow Us
-                            </a>
-                        </p>
-                    </div>
 
                     <section className="counter text-center">
                         <div className="container">
@@ -464,6 +445,32 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                        <div style={{textAlign: "center", width: "100%"}}>
+                            <p
+                                style={{
+                                    fontFamily: "'Libre Baskerville', serif",
+                                    fontSize: "16px",
+                                    fontWeight: "bold",
+                                    textRendering: "optimizeLegibility",
+                                    WebkitFontSmoothing: "antialiased",
+                                }}
+                            >
+                                <a href="/community"
+                                   style={{color: "inherit", textDecoration: "none", margin: "0 10px"}}>
+                                    Community
+                                </a>
+                                |
+                                <a href="/impressum"
+                                   style={{color: "inherit", textDecoration: "none", margin: "0 10px"}}>
+                                    Impressum
+                                </a>
+                                |
+                                <a href="/follow-us"
+                                   style={{color: "inherit", textDecoration: "none", margin: "0 10px"}}>
+                                    Follow Us
+                                </a>
+                            </p>
                         </div>
                     </section>
 
