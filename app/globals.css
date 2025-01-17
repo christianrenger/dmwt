@@ -13,6 +13,7 @@ body {
   cursor: url("icons8-tshirt-32.png") 32 32,auto;
 }
 
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -210,7 +211,7 @@ body {
   border-bottom-left-radius: 25%;
 
 }
-.hero-square {
+.hero-square1 {
   position: absolute;
   top: 0.9%; /* Vertikal zentrieren */
   right: 0.9%; /* Horizontal zentrieren */
@@ -225,6 +226,15 @@ body {
   align-items: center;
   z-index: 0; /* Hinter den Inhalten der Seite */
   opacity: 0.5; /* Optional: Etwas transparent machen */
+}
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 60px;
+  aspect-ratio: 1;
+  --g: conic-gradient(from -90deg at 10px 10px,#fff 90deg,#0000 0);
+  background: var(--g), var(--g), var(--g);
+  background-size: 50% 50%;
+  animation: l18 1s infinite;
 }
 
 .square-text {
