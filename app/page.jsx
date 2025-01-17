@@ -4,6 +4,7 @@ import Link from 'next/link';
 import {useState, useEffect} from "react";
 
 
+
 export default function Home() {
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -23,6 +24,7 @@ export default function Home() {
         return () => {
             sections.forEach((section) => observer.unobserve(section));
         };
+
     }, []);
 
     useEffect(() => {
@@ -87,14 +89,13 @@ export default function Home() {
 
         const observer = new IntersectionObserver(
             (entries) => entries.forEach(animateNumbers),
-            { threshold: 0.2 }
+            {threshold: 0.2}
         );
 
         digitBoxes.forEach((box) => observer.observe(box));
 
         return () => observer.disconnect();
     }, []);
-
 
     return (
         <div>
@@ -117,6 +118,7 @@ export default function Home() {
                     <span className="square-text"></span>
                 </div>
 
+
                 <div className="hero-content">
                     <h1>Trage, Was Die Welt Verändert!</h1>
                     <p>
@@ -138,9 +140,10 @@ export default function Home() {
 
             </header>
 
+
             <section className="content-section fade-in">
-                <div className="container">
-                <div className="row odd">
+            <div className="container">
+                    <div className="row odd">
                         <div className="text">
                             <div className="colored-text-container">
                                 <h2>Rohstoffe gewinnen</h2>
@@ -186,6 +189,11 @@ export default function Home() {
                         />
                     </div>
                 </div>
+                <div className="hero-square2">
+                    <span className="square-text"></span>
+                </div>
+
+
             </section>
 
             <section className="content-section fade-in">
@@ -213,6 +221,9 @@ export default function Home() {
                         />
                     </div>
                 </div>
+                <div className="hero-square3">
+                    <span className="square-text"></span>
+                </div>
             </section>
 
             <section className="content-section fade-in">
@@ -239,6 +250,9 @@ export default function Home() {
                         />
                     </div>
                 </div>
+                <div className="hero-square2">
+                    <span className="square-text"></span>
+                </div>
             </section>
 
             <section className="content-section fade-in">
@@ -262,6 +276,9 @@ export default function Home() {
                             className="image"
                         />
                     </div>
+                </div>
+                <div className="hero-square3">
+                    <span className="square-text"></span>
                 </div>
             </section>
 
@@ -291,6 +308,9 @@ export default function Home() {
                         />
                     </div>
                 </div>
+                <div className="hero-square2">
+                    <span className="square-text"></span>
+                </div>
             </section>
 
             <section className="content-section fade-in">
@@ -316,20 +336,19 @@ export default function Home() {
                         />
                     </div>
                 </div>
+                <div className="hero-square3">
+                    <span className="square-text"></span>
+                </div>
             </section>
 
 
             {/* Infografik */
             }
             <section id="infografik" className="infografik-section">
-                <h2>Infografik: Puzzle</h2>
-                <div className="puzzle">
-                    <div className="puzzle-piece" data-step="1">🔲</div>
-                    <div className="puzzle-piece" data-step="2">🔳</div>
-                    <div className="puzzle-piece" data-step="3">🔲</div>
+                <div className="image-container">
+                    <img src="infografik.png" alt="Infografik-Bild"/>
                 </div>
             </section>
-
 
 
             {/* Unsere Wahl Section */

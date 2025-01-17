@@ -14,6 +14,7 @@ body {
 }
 
 
+
 /* Navbar */
 .navbar {
   display: flex;
@@ -40,6 +41,7 @@ body {
   text-decoration: none;
   font-size: 1rem;
 }
+
 .logo {
   display: flex;
   align-items: center; /* Aligns the logo and text vertically */
@@ -227,6 +229,42 @@ body {
   z-index: 0; /* Hinter den Inhalten der Seite */
   opacity: 0.5; /* Optional: Etwas transparent machen */
 }
+.hero-square2 {
+  position: absolute;
+  top: 0.9%; /* Vertikal zentrieren */
+  left: 0.9%; /* Horizontal zentrieren */
+  width: 300px; /* Größe des Quadrats */
+  height: 300px; /* Größe des Quadrats */
+  background-image: radial-gradient(circle, #4F633F 1px, transparent 1px);
+  background-size: 30px 30px; /* Größe der Punkte */
+  background-position: center ;
+  background-color: #FAEDDC; /* Hintergrundfarbe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -4; /* Hinter den Inhalten der Seite */
+  opacity: 0.5; /* Optional: Etwas transparent machen */
+}
+.hero-square3 {
+  position: absolute;
+  top: 0.9%; /* Vertikal zentrieren */
+  right: 0.9%; /* Horizontal zentrieren */
+  width: 300px; /* Größe des Quadrats */
+  height: 300px; /* Größe des Quadrats */
+  background-image: radial-gradient(circle, #4F633F 1px, transparent 1px);
+  background-size: 30px 30px; /* Größe der Punkte */
+  background-position: center ;
+  background-color: #FAEDDC; /* Hintergrundfarbe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -4; /* Hinter den Inhalten der Seite */
+  opacity: 0.5; /* Optional: Etwas transparent machen */
+}
+
+
+
+
 /* HTML: <div class="loader"></div> */
 .loader {
   width: 60px;
@@ -301,20 +339,10 @@ body {
 /* Infografik */
 .infografik-section {
   padding: 50px;
-  background-color: #D6E8C4;
   text-align: center;
 }
 
-.puzzle {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
 
-.puzzle-piece {
-  font-size: 2rem;
-  cursor: pointer;
-}
 .counter {
   padding: 2rem;
 }
@@ -386,9 +414,6 @@ body {
   }
 }
 
-
-
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -420,7 +445,6 @@ body {
 .colored-text-container p {
   color: #faebd8; /* Example: slightly lighter gray for paragraph text */
 }
-
 
 .row {
   display: flex;
