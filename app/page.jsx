@@ -64,6 +64,37 @@ export default function Home() {
         };
 
     }, []);
+    useEffect(() => {
+        const digitBoxes = document.querySelectorAll('.digit-box');
+
+        const animateNumbers = (entry) => {
+            if (entry.isIntersecting) {
+                digitBoxes.forEach((box) => {
+                    const targetValue = parseInt(box.dataset.val, 10);
+                    let currentValue = 0;
+
+                    const interval = setInterval(() => {
+                        currentValue += Math.ceil(targetValue / 50);
+                        if (currentValue >= targetValue) {
+                            currentValue = targetValue;
+                            clearInterval(interval);
+                        }
+                        box.textContent = currentValue.toString().padStart(3, '0');
+                    }, 30);
+                });
+            }
+        };
+
+        const observer = new IntersectionObserver(
+            (entries) => entries.forEach(animateNumbers),
+            { threshold: 0.2 }
+        );
+
+        digitBoxes.forEach((box) => observer.observe(box));
+
+        return () => observer.disconnect();
+    }, []);
+
 
     return (
         <div>
@@ -404,6 +435,36 @@ export default function Home() {
                             </a>
                         </p>
                     </div>
+                    <section className="counter text-center">
+                        <div className="container">
+                            <div className="row">
+                                <div className="foo">
+                                    <div className="single-number green-box">
+                                        <span className="digit-box" data-val="120">000</span>
+                                        <span className="text-box">Different Locations</span>
+                                    </div>
+                                </div>
+                                <div className="foo">
+                                    <div className="single-number blue-box">
+                                        <span className="digit-box" data-val="090">000</span>
+                                        <span className="text-box">Awards Won</span>
+                                    </div>
+                                </div>
+                                <div className="foo">
+                                    <div className="single-number red-box">
+                                        <span className="digit-box" data-val="055">000</span>
+                                        <span className="text-box">Projects Done</span>
+                                    </div>
+                                </div>
+                                <div className="foo">
+                                    <div className="single-number purple-box">
+                                        <span className="digit-box" data-val="125">000</span>
+                                        <span className="text-box">Happy Clients</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
 
 
                     <style jsx>{`

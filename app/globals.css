@@ -304,6 +304,76 @@ body {
   font-size: 2rem;
   cursor: pointer;
 }
+.counter {
+  padding: 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.foo {
+  flex: 1;
+  padding: 1rem;
+}
+
+.single-number {
+  margin: 1rem 0;
+  padding: 20px;
+  border-radius: 8px;
+  transition: all 0.3s;
+}
+
+.digit-box {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff; /* White text color for contrast */
+}
+
+.text-box {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+/* Color variations for each counter box */
+.green-box {
+  background-color: #d8ae56;
+}
+
+.blue-box {
+  background-color: #7c8a68;
+}
+
+.red-box {
+  background-color: #d8ae56;
+}
+
+.purple-box {
+  background-color: #7c8a68;
+}
+
+.single-number:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive for mobile devices */
+@media (max-width: 1000px) {
+  .digit-box {
+    font-size: 2rem;
+  }
+}
 
 
 
@@ -374,6 +444,7 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
 
 
 
