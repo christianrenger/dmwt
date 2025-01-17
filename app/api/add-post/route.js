@@ -11,7 +11,9 @@ export async function POST(request){
                 content,
                 published: true,
                 author: {create: {
-                    name: 'christian'
+                    name: 'Gast',
+                    username: 'test',
+                    password: '123'
                 }}
             }
 
