@@ -18,7 +18,10 @@ const JigsawPuzzleInfographic = ({ onSolved }) => {
                 imageSrc="/logoo.svg"
                 rows={3}
                 columns={3}
-                onSolved={onSolved}
+                onSolved={() => {
+                    // Entkopplung durch setTimeout
+                    setTimeout(() => onSolved(), 0);
+                }}
                 className="jigsaw-puzzle"
             />
         </div>
