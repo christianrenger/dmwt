@@ -165,12 +165,56 @@ body {
   z-index: 0; /* Hinter den Inhalten der Seite */
   opacity: 0.5; /* Optional: Etwas transparent machen */
 }
+.hero-square4 {
+  position: absolute;
+  bottom: 200px; /* Vertikal zentrieren */
+  left: 100px; /* Horizontal zentrieren */
+  width: 300px; /* Größe des Quadrats */
+  height: 400px; /* Größe des Quadrats */
+  background-size: 30px 30px; /* Größe der Punkte */
+  background-color: #FAEDDC; /* Hintergrundfarbe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0; /* Hinter den Inhalten der Seite */
+  opacity: 0.5; /* Optional: Etwas transparent machen */
+}
 .hero-square2 {
   position: absolute;
   top: 0.9%; /* Vertikal zentrieren */
-  left: 0.9%; /* Horizontal zentrieren */
-  width: 300px; /* Größe des Quadrats */
+  left: 170px; /* Horizontal zentrieren */
+  width: 200px; /* Größe des Quadrats */
   height: 300px; /* Größe des Quadrats */
+  background-size: 30px 30px; /* Größe der Punkte */
+  background-position: center ;
+  background-color: #FAEDDC; /* Hintergrundfarbe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -4; /* Hinter den Inhalten der Seite */
+  opacity: 0.5; /* Optional: Etwas transparent machen */
+}
+.hero-square5 {
+  position: absolute;
+  top: 0.9%; /* Vertikal zentrieren */
+  left: 370px; /* Horizontal zentrieren */
+  width: 200px; /* Größe des Quadrats */
+  height: 200px; /* Größe des Quadrats */
+  background-size: 30px 30px; /* Größe der Punkte */
+  background-position: center ;
+  background-color: #FAEDDC; /* Hintergrundfarbe */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -4; /* Hinter den Inhalten der Seite */
+  opacity: 0.5; /* Optional: Etwas transparent machen */
+}
+.hero-square6 {
+  position: absolute;
+  bottom: 0.9%; /* Vertikal zentrieren */
+  left: 770px; /* Horizontal zentrieren */
+  width: 200px; /* Größe des Quadrats */
+  height: 200px; /* Größe des Quadrats */
   background-image: radial-gradient(circle, #4F633F 1px, transparent 1px);
   background-size: 30px 30px; /* Größe der Punkte */
   background-position: center ;
@@ -184,7 +228,7 @@ body {
 .hero-square3 {
   position: absolute;
   top: 0.9%; /* Vertikal zentrieren */
-  right: 0.9%; /* Horizontal zentrieren */
+  right: 100px; /* Horizontal zentrieren */
   width: 300px; /* Größe des Quadrats */
   height: 300px; /* Größe des Quadrats */
   background-image: radial-gradient(circle, #4F633F 1px, transparent 1px);

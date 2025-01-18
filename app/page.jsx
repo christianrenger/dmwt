@@ -150,6 +150,9 @@ export default function Home() {
                 <div className="hero-square1">
                     <span className="square-text"></span>
                 </div>
+                <div className="hero-square4">
+                    <span className="square-text"></span>
+                </div>
 
 
                 <div className="hero-content">
@@ -222,10 +225,12 @@ export default function Home() {
                         />
                     </div>
                 </div>
+                <div className="hero-square3">
+                    <span className="square-text"></span>
+                </div>
                 <div className="hero-square2">
                     <span className="square-text"></span>
                 </div>
-
 
             </section>
 
@@ -254,7 +259,7 @@ export default function Home() {
                         />
                     </div>
                 </div>
-                <div className="hero-square2">
+                <div className="hero-square5">
                     <span className="square-text"></span>
                 </div>
             </section>
@@ -310,7 +315,7 @@ export default function Home() {
                         />
                     </div>
                 </div>
-                <div className="hero-square3">
+                <div className="hero-square6">
                     <span className="square-text"></span>
                 </div>
             </section>
