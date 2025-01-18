@@ -189,9 +189,7 @@ export default function Home() {
                                 <p>
                                     Hier werden die natürlichen oder synthetischen Materialien für die Herstellung von
                                     Stoffen
-                                    beschafft. Das können Baumwolle, Wolle, Leinen oder synthetische Fasern wie
-                                    Polyester
-                                    sein.
+                                    beschafft. Die Ressourcen für diesen Schritt umfassen Baumwolle, Wolle, Leinen oder synthetische Fasern wie Polyester. Für den Anbau von Naturfasern werden Wasser, Land und Dünger benötigt, während synthetische Fasern auf Erdöl basieren
                                 </p>
                             </div>
                         </div>
@@ -213,9 +211,7 @@ export default function Home() {
                             <div className="colored-text-container">
                                 <h2>Faserverarbeitung</h2>
                                 <p>
-                                    In diesem Schritt werden die gewonnenen Rohstoffe zu Fasern verarbeitet, die dann zu
-                                    Garnen
-                                    gesponnen werden. Bei natürlichen Fasern geschieht dies durch Kardieren und Spinnen.
+                                    Zur Verarbeitung der Rohstoffe werden Maschinen wie Kardier- und Spinnmaschinen benötigt. Zusätzlich spielen Energie und manchmal Chemikalien zur Behandlung der Fasern eine wichtige Rolle.
                                 </p>
                             </div>
                         </div>
@@ -249,7 +245,7 @@ export default function Home() {
                                 <p>
                                     Die gesponnenen Fasern werden zu Stoffen gewebt oder gestrickt. Es entstehen so die
                                     Textilien,
-                                    die dann für die Bekleidung verwendet werden.
+                                    die dann für die Bekleidung verwendet werden. Dafür sind Energie, Maschinen und oft Wasser erforderlich.
                                 </p>
                             </div>
                         </div>
@@ -278,7 +274,7 @@ export default function Home() {
                                     spezielle
                                     Veredelungen wie z.B. Imprägnierungen oder Waschprozesse erfolgen, um den Stoff zu
                                     verbessern
-                                    (z.B. für weichere Haptik oder bessere Pflegeeigenschaften).
+                                    Für das Färben werden Farbstoffe (natürlich oder synthetisch), Wasser und Chemikalien wie Fixiermittel genutzt. Veredelungsprozesse benötigen Maschinen und thermische Energie.
                                 </p>
                             </div>
                         </div>
@@ -336,7 +332,7 @@ export default function Home() {
                                     Die zugeschnittenen Teile werden mit Nähmaschinen oder per Hand zu einem
                                     Kleidungsstück
                                     zusammengenäht. Hierbei werden auch Reißverschlüsse, Knöpfe oder andere Details
-                                    hinzugefügt.
+                                    hinzugefügt. Die Teile werden mit Nähmaschinen und Garn zusammengenäht. Zubehör wie Knöpfe oder Reißverschlüsse ergänzt den Prozess. Strom wird für die Maschinen benötigt.
                                 </p>
                             </div>
                         </div>
@@ -364,7 +360,7 @@ export default function Home() {
                                     Das fertige Kleidungsstück wird an Händler, Boutiquen oder in Onlineshops geliefert
                                     und
                                     zum
-                                    Verkauf angeboten, damit die Endverbraucher es kaufen können.
+                                    Verkauf angeboten, damit die Endverbraucher es kaufen können. Verpackungsmaterialien, Transportmittel und Energie für Lagerung und Kühlung sind in diesem Schritt essenziell. Produkte gelangen über Läden oder Online-Shops zum Kunden.
                                 </p>
                             </div>
                         </div>
