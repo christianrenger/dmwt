@@ -345,9 +345,7 @@ export default function Home() {
             {/* Infografik */
             }
             <section id="infografik" className="infografik-section">
-                <div className="image-container">
-                    <img src="infografik.png" alt="Infografik-Bild"/>
-                </div>
+
             </section>
 
 
