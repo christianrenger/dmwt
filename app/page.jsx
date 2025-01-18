@@ -1,10 +1,77 @@
+// "use client";
+// import Image from 'next/image';
+// import Link from 'next/link';
+// import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
+// import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
+// import {useState, useEffect, useCallback} from "react";
+//
+//
+//
+// // The JigsawPuzzleInfographic component
+// const JigsawPuzzleInfographic = ({ onSolved }) => {
+//     return (
+//         <div className="jigsaw-puzzle-container">
+//             <JigsawPuzzle
+//                 imageSrc="/logoo.svg"
+//                 rows={3}
+//                 columns={3}
+//                 onSolved={onSolved}
+//                 className="jigsaw-puzzle"
+//             />
+//         </div>
+//     );
+// };
+//
+// export default function Home() {
+//     const [text, setText] = useState("Unpuzzle the pieces!!");
+//     const [isSolved, setIsSolved] = useState(false);
+//
+//     const onSolved = useCallback(() => {
+//         setIsSolved(true); // Set the puzzle as solved
+//     },[]);
+//
+//     useEffect(() => {
+//         if (isSolved) {
+//             setText("Congratulations!!");
+//         }
+//     }, [isSolved]); // This effect runs when `isSolved` changes
+
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-import {useState, useEffect} from "react";
+import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
+import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
+import { useState, useEffect, useCallback } from "react";
 
+// The JigsawPuzzleInfographic component
+const JigsawPuzzleInfographic = ({ onSolved }) => {
+    return (
+        <div className="jigsaw-puzzle-container">
+            <JigsawPuzzle
+                imageSrc="/logoo.svg"
+                rows={3}
+                columns={3}
+                onSolved={onSolved}
+                className="jigsaw-puzzle"
+            />
+        </div>
+    );
+};
 
 export default function Home() {
+    const [text, setText] = useState("Unpuzzle the pieces!!");
+    const [isSolved, setIsSolved] = useState(false);
+
+    const onSolved = useCallback(() => {
+        setIsSolved(true); // Flag puzzle as solved
+    }, []);
+
+    useEffect(() => {
+        if (isSolved) {
+            setText("Congratulations!!");
+        }
+    }, [isSolved]); // This effect will run only when `isSolved` changes
+
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -24,6 +91,7 @@ export default function Home() {
             sections.forEach((section) => observer.unobserve(section));
         };
     }, []);
+
 
     useEffect(() => {
         // Handle scroll event to create the parallax effect
@@ -140,16 +208,14 @@ export default function Home() {
 
             <section className="content-section fade-in">
                 <div className="container">
-                <div className="row odd">
+                    <div className="row odd">
                         <div className="text">
                             <div className="colored-text-container">
                                 <h2>Rohstoffe gewinnen</h2>
                                 <p>
-                                    Hier werden die natürlichen oder synthetischen Materialien für die Herstellung von
-                                    Stoffen
-                                    beschafft. Das können Baumwolle, Wolle, Leinen oder synthetische Fasern wie
-                                    Polyester
-                                    sein.
+                                    Die Ressourcen für diesen Schritt umfassen Baumwolle, Wolle, Leinen oder
+                                    synthetische Fasern wie Polyester. Für den Anbau von Naturfasern werden Wasser, Land
+                                    und Dünger benötigt, während synthetische Fasern auf Erdöl basieren.
                                 </p>
                             </div>
                         </div>
@@ -171,9 +237,9 @@ export default function Home() {
                             <div className="colored-text-container">
                                 <h2>Faserverarbeitung</h2>
                                 <p>
-                                    In diesem Schritt werden die gewonnenen Rohstoffe zu Fasern verarbeitet, die dann zu
-                                    Garnen
-                                    gesponnen werden. Bei natürlichen Fasern geschieht dies durch Kardieren und Spinnen.
+                                    Zur Verarbeitung der Rohstoffe werden Maschinen wie Kardier- und Spinnmaschinen
+                                    benötigt. Zusätzlich spielen Energie und manchmal Chemikalien zur Behandlung der
+                                    Fasern eine wichtige Rolle.
                                 </p>
                             </div>
                         </div>
@@ -200,7 +266,9 @@ export default function Home() {
                                 <p>
                                     Die gesponnenen Fasern werden zu Stoffen gewebt oder gestrickt. Es entstehen so die
                                     Textilien,
-                                    die dann für die Bekleidung verwendet werden.
+                                    die dann für die Bekleidung verwendet werden. In diesem Schritt werden Webstühle
+                                    oder Strickmaschinen verwendet, um Garne zu Textilien zu verarbeiten. Dafür sind
+                                    Energie, Maschinen und oft Wasser erforderlich.
                                 </p>
                             </div>
                         </div>
@@ -225,8 +293,9 @@ export default function Home() {
                                     Der Stoff wird gefärbt, um ihm die gewünschte Farbe zu geben. Außerdem können
                                     spezielle
                                     Veredelungen wie z.B. Imprägnierungen oder Waschprozesse erfolgen, um den Stoff zu
-                                    verbessern
-                                    (z.B. für weichere Haptik oder bessere Pflegeeigenschaften).
+                                    verbessern. Für das Färben werden Farbstoffe (natürlich oder synthetisch), Wasser
+                                    und Chemikalien wie Fixiermittel genutzt. Veredelungsprozesse benötigen Maschinen
+                                    und thermische Energie.
                                 </p>
                             </div>
                         </div>
@@ -278,7 +347,9 @@ export default function Home() {
                                     Die zugeschnittenen Teile werden mit Nähmaschinen oder per Hand zu einem
                                     Kleidungsstück
                                     zusammengenäht. Hierbei werden auch Reißverschlüsse, Knöpfe oder andere Details
-                                    hinzugefügt.
+                                    hinzugefügt. Die Teile werden mit Nähmaschinen und Garn zusammengenäht. Zubehör wie
+                                    Knöpfe oder Reißverschlüsse ergänzt den Prozess. Strom wird für die Maschinen
+                                    benötigt.
                                 </p>
                             </div>
                         </div>
@@ -304,6 +375,8 @@ export default function Home() {
                                     und
                                     zum
                                     Verkauf angeboten, damit die Endverbraucher es kaufen können.
+                                    Verpackungsmaterialien, Transportmittel und Energie für Lagerung und Kühlung sind in
+                                    diesem Schritt essenziell.
                                 </p>
                             </div>
                         </div>
@@ -319,17 +392,26 @@ export default function Home() {
             </section>
 
 
-            {/* Infografik */
-            }
-            <section id="infografik" className="infografik-section">
-                <h2>Infografik: Puzzle</h2>
-                <div className="puzzle">
-                    <div className="puzzle-piece" data-step="1">🔲</div>
-                    <div className="puzzle-piece" data-step="2">🔳</div>
-                    <div className="puzzle-piece" data-step="3">🔲</div>
-                </div>
-            </section>
+            {/* Infografik */}
+            {/*<section className="infographic-section">*/}
+            {/*    <h2 className="tag">{text}</h2>*/}
+            {/*    <JigsawPuzzle*/}
+            {/*        imageSrc="/logoo.svg"*/}
+            {/*        rows={3}*/}
+            {/*        columns={3}*/}
+            {/*        onSolved={onSolved}*/}
+            {/*        className="jigsaw-puzzle"*/}
+            {/*    />*/}
+            {/*    <JigsawPuzzleInfographic onSolved={onSolved} />*/}
+            {/*</section>*/}
 
+            <div>
+                {/* Infographic Section */}
+                <section className="infographic-section">
+                    <h2 className="tag">{text}</h2>
+                    <JigsawPuzzleInfographic onSolved={onSolved}/>
+                </section>
+            </div>
 
 
             {/* Unsere Wahl Section */
