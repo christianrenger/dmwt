@@ -1,11 +1,44 @@
+// "use client";
+// import Image from 'next/image';
+// import Link from 'next/link';
+// import {useState, useEffect} from "react";
+
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-import {useState, useEffect} from "react";
+import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
+import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
+import { useState, useEffect, useCallback } from "react";
 
-
+// The JigsawPuzzleInfographic component
+const JigsawPuzzleInfographic = ({ onSolved }) => {
+    return (
+        <div className="jigsaw-puzzle-container">
+            <JigsawPuzzle
+                imageSrc="/logoo.svg"
+                rows={3}
+                columns={3}
+                onSolved={onSolved}
+                className="jigsaw-puzzle"
+            />
+        </div>
+    );
+};
 
 export default function Home() {
+    const [text, setText] = useState("Unpuzzle the pieces!!");
+    const [isSolved, setIsSolved] = useState(false);
+
+    const onSolved = useCallback(() => {
+        setIsSolved(true); // Flag puzzle as solved
+    }, []);
+
+    useEffect(() => {
+        if (isSolved) {
+            setText("Congratulations!!");
+        }
+    }, [isSolved]); // This effect will run only when `isSolved` changes
+
     useEffect(() => {
         const observer = new IntersectionObserver(
             (entries) => {
@@ -142,7 +175,7 @@ export default function Home() {
 
 
             <section className="content-section fade-in">
-            <div className="container">
+                <div className="container">
                     <div className="row odd">
                         <div className="text">
                             <div className="colored-text-container">
@@ -342,11 +375,13 @@ export default function Home() {
             </section>
 
 
-            {/* Infografik */
-            }
-            <section id="infografik" className="infografik-section">
-
-            </section>
+            <div>
+                {/* Infographic Section */}
+                <section className="infographic-section">
+                    <h2 className="tag">{text}</h2>
+                    <JigsawPuzzleInfographic onSolved={onSolved}/>
+                </section>
+            </div>
 
 
             {/* Unsere Wahl Section */
