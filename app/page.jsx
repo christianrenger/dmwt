@@ -200,8 +200,8 @@ export default function Home() {
                         <button className="cta-button" onClick={handleButtonClick}>
                             Mehr Informationen
                         </button>
-                        {ctaInfoVisible && (
-                            <p style={{marginTop: '20px', color: '#000000'}}>
+                        <div className={`cta-info ${ctaInfoVisible ? 'visible' : ''}`}>
+                            <p>
                                 Jedes Kleidungsstück erzählt eine Geschichte – von der Gewinnung der Rohstoffe bis hin zur Produktion.
                                 Baumwolle wird angebaut, geerntet und verarbeitet, oft unter enormem Wasserverbrauch und Einsatz von Pestiziden.
                                 Synthetische Stoffe entstehen aus Erdöl, einer begrenzten Ressource, die unwiederbringlich verloren geht.
@@ -209,7 +209,7 @@ export default function Home() {
                                 Auf unserer Webseite zeigen wir, wie viele Ressourcen durch die Herstellung eines einzigen Kleidungsstücks
                                 verloren gehen und wie nachhaltige Alternativen helfen können, diese Auswirkungen zu minimieren.
                             </p>
-                        )}
+                            </div>
                     </div>
                         <div className="wave"></div>
                     <div className="hero-image">
