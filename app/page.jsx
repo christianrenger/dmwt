@@ -221,7 +221,7 @@ export default function Home() {
                         />
                     </div>
                 </div>
-                <div className="hero-square3">
+                <div className="hero-square2">
                     <span className="square-text"></span>
                 </div>
             </section>
