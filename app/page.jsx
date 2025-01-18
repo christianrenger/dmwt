@@ -15,7 +15,7 @@ const JigsawPuzzleInfographic = ({ onSolved }) => {
     return (
         <div className="jigsaw-puzzle-container">
             <JigsawPuzzle
-                imageSrc="/logoo.svg"
+                imageSrc="/Info.svg"
                 rows={3}
                 columns={3}
                 onSolved={() => {
