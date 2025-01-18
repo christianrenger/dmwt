@@ -126,8 +126,20 @@ body {
   padding: 10px 20px;
   text-decoration: none;
   border-radius: 5px;
-  cursor: url("icons8-tshirt-32.png") 32 32,auto;
+  cursor: pointer;
 }
+.cta-info {
+  opacity: 100;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+
+.cta-info.visible {
+  opacity: 1;
+  max-height: 100px;
+}
+
 
 /* Hero Image */
 .hero-image {

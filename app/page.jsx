@@ -10,6 +10,7 @@ import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
 import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import { useState, useEffect, useCallback } from "react";
 
+
 // The JigsawPuzzleInfographic component
 const JigsawPuzzleInfographic = ({ onSolved }) => {
     return (
@@ -31,6 +32,10 @@ const JigsawPuzzleInfographic = ({ onSolved }) => {
 export default function Home() {
     const [text, setText] = useState("Solve the puzzle!!");
     const [isSolved, setIsSolved] = useState(false);
+    const [ctaInfoVisible, setCtaInfoVisible] = useState(false);
+    const handleButtonClick = () => {
+        setCtaInfoVisible(!ctaInfoVisible); // Umschalten der Sichtbarkeit
+    };
 
     const onSolved = useCallback(() => {
         setIsSolved(true); // Flag puzzle as solved
@@ -149,35 +154,70 @@ export default function Home() {
             </nav>
 
             {/* Hero Section */}
-            <header id="startseite" className="hero">
-                <div className="hero-square1">
-                    <span className="square-text"></span>
-                </div>
-                <div className="hero-square4">
-                    <span className="square-text"></span>
-                </div>
+            {/*<header id="startseite" className="hero">*/}
+            {/*    <div className="hero-square1">*/}
+            {/*        <span className="square-text"></span>*/}
+            {/*    </div>*/}
+            {/*    <div className="hero-square4">*/}
+            {/*        <span className="square-text"></span>*/}
+            {/*    </div>*/}
 
 
-                <div className="hero-content">
-                    <h1>Trage, Was Die Welt Verändert!</h1>
-                    <p>
-                        „Jeder Kauf ist ein kleiner Schritt in Richtung einer nachhaltigeren Zukunft. Werde Teil der
-                        Veränderung!“
-                    </p>
-                    <button className="cta-button">Mehr Informationen</button>
-                </div>
-                <div className="wave"></div>
-                <div className="hero-image">
-                    <Image
-                        src="/frau.jpg"
-                        alt="Frau mit gelbem Kleid"
-                        width={400}
-                        height={500}
-                    />
-                </div>
+            {/*    <div className="hero-content">*/}
+            {/*        <h1>Trage, Was Die Welt Verändert!</h1>*/}
+            {/*        <p>*/}
+            {/*            „Jeder Kauf ist ein kleiner Schritt in Richtung einer nachhaltigeren Zukunft. Werde Teil der*/}
+            {/*            Veränderung!“*/}
+            {/*        </p>*/}
+            {/*        <button className="cta-button">Mehr Informationen</button>*/}
+            {/*    </div>*/}
+            {/*    <div className="wave"></div>*/}
+            {/*    <div className="hero-image">*/}
+            {/*        <Image*/}
+            {/*            src="/frau.jpg"*/}
+            {/*            alt="Frau mit gelbem Kleid"*/}
+            {/*            width={400}*/}
+            {/*            height={500}*/}
+            {/*        />*/}
+            {/*    </div>*/}
 
 
-            </header>
+            {/*</header>*/}
+            <div>
+                <header className="hero">
+                        <div className="hero-square1">
+                            <span className="square-text"></span>
+                        </div>
+                        <div className="hero-square4">
+                            <span className="square-text"></span>
+                        </div>
+                    <div className="hero-section">
+                        <h1>Trage, Was Die Welt Verändert!</h1>
+                        <p>
+                            „Jeder Kauf ist ein kleiner Schritt in Richtung einer nachhaltigeren Zukunft. Werde Teil der
+                            Veränderung!“
+                        </p>
+                        <button className="cta-button" onClick={handleButtonClick}>
+                            Mehr Informationen
+                        </button>
+                        {ctaInfoVisible && (
+                            <p style={{marginTop: '20px', color: '#000000'}}>
+                                Unsere Kleidung wird nachhaltig und umweltbewusst produziert. Wir setzen auf recycelte
+                                Materialien und faire Arbeitsbedingungen.
+                            </p>
+                        )}
+                    </div>
+                        <div className="wave"></div>
+                    <div className="hero-image">
+                        <Image
+                            src="/frau.jpg"
+                            alt="Frau mit gelbem Kleid"
+                            width={400}
+                            height={500}
+                        />
+                    </div>
+                </header>
+            </div>
 
 
             <section className="content-section fade-in">
@@ -189,7 +229,9 @@ export default function Home() {
                                 <p>
                                     Hier werden die natürlichen oder synthetischen Materialien für die Herstellung von
                                     Stoffen
-                                    beschafft. Die Ressourcen für diesen Schritt umfassen Baumwolle, Wolle, Leinen oder synthetische Fasern wie Polyester. Für den Anbau von Naturfasern werden Wasser, Land und Dünger benötigt, während synthetische Fasern auf Erdöl basieren
+                                    beschafft. Die Ressourcen für diesen Schritt umfassen Baumwolle, Wolle, Leinen oder
+                                    synthetische Fasern wie Polyester. Für den Anbau von Naturfasern werden Wasser, Land
+                                    und Dünger benötigt, während synthetische Fasern auf Erdöl basieren
                                 </p>
                             </div>
                         </div>
@@ -211,7 +253,9 @@ export default function Home() {
                             <div className="colored-text-container">
                                 <h2>Faserverarbeitung</h2>
                                 <p>
-                                    Zur Verarbeitung der Rohstoffe werden Maschinen wie Kardier- und Spinnmaschinen benötigt. Zusätzlich spielen Energie und manchmal Chemikalien zur Behandlung der Fasern eine wichtige Rolle.
+                                    Zur Verarbeitung der Rohstoffe werden Maschinen wie Kardier- und Spinnmaschinen
+                                    benötigt. Zusätzlich spielen Energie und manchmal Chemikalien zur Behandlung der
+                                    Fasern eine wichtige Rolle.
                                 </p>
                             </div>
                         </div>
@@ -245,7 +289,8 @@ export default function Home() {
                                 <p>
                                     Die gesponnenen Fasern werden zu Stoffen gewebt oder gestrickt. Es entstehen so die
                                     Textilien,
-                                    die dann für die Bekleidung verwendet werden. Dafür sind Energie, Maschinen und oft Wasser erforderlich.
+                                    die dann für die Bekleidung verwendet werden. Dafür sind Energie, Maschinen und oft
+                                    Wasser erforderlich.
                                 </p>
                             </div>
                         </div>
@@ -274,7 +319,9 @@ export default function Home() {
                                     spezielle
                                     Veredelungen wie z.B. Imprägnierungen oder Waschprozesse erfolgen, um den Stoff zu
                                     verbessern
-                                    Für das Färben werden Farbstoffe (natürlich oder synthetisch), Wasser und Chemikalien wie Fixiermittel genutzt. Veredelungsprozesse benötigen Maschinen und thermische Energie.
+                                    Für das Färben werden Farbstoffe (natürlich oder synthetisch), Wasser und
+                                    Chemikalien wie Fixiermittel genutzt. Veredelungsprozesse benötigen Maschinen und
+                                    thermische Energie.
                                 </p>
                             </div>
                         </div>
@@ -332,7 +379,9 @@ export default function Home() {
                                     Die zugeschnittenen Teile werden mit Nähmaschinen oder per Hand zu einem
                                     Kleidungsstück
                                     zusammengenäht. Hierbei werden auch Reißverschlüsse, Knöpfe oder andere Details
-                                    hinzugefügt. Die Teile werden mit Nähmaschinen und Garn zusammengenäht. Zubehör wie Knöpfe oder Reißverschlüsse ergänzt den Prozess. Strom wird für die Maschinen benötigt.
+                                    hinzugefügt. Die Teile werden mit Nähmaschinen und Garn zusammengenäht. Zubehör wie
+                                    Knöpfe oder Reißverschlüsse ergänzt den Prozess. Strom wird für die Maschinen
+                                    benötigt.
                                 </p>
                             </div>
                         </div>
@@ -360,7 +409,10 @@ export default function Home() {
                                     Das fertige Kleidungsstück wird an Händler, Boutiquen oder in Onlineshops geliefert
                                     und
                                     zum
-                                    Verkauf angeboten, damit die Endverbraucher es kaufen können. Verpackungsmaterialien, Transportmittel und Energie für Lagerung und Kühlung sind in diesem Schritt essenziell. Produkte gelangen über Läden oder Online-Shops zum Kunden.
+                                    Verkauf angeboten, damit die Endverbraucher es kaufen können.
+                                    Verpackungsmaterialien, Transportmittel und Energie für Lagerung und Kühlung sind in
+                                    diesem Schritt essenziell. Produkte gelangen über Läden oder Online-Shops zum
+                                    Kunden.
                                 </p>
                             </div>
                         </div>
