@@ -29,7 +29,7 @@ const JigsawPuzzleInfographic = ({ onSolved }) => {
 };
 
 export default function Home() {
-    const [text, setText] = useState("Unpuzzle the pieces!!");
+    const [text, setText] = useState("Solve the puzzle!!");
     const [isSolved, setIsSolved] = useState(false);
 
     const onSolved = useCallback(() => {
