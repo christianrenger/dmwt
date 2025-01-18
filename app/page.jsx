@@ -202,8 +202,12 @@ export default function Home() {
                         </button>
                         {ctaInfoVisible && (
                             <p style={{marginTop: '20px', color: '#000000'}}>
-                                Unsere Kleidung wird nachhaltig und umweltbewusst produziert. Wir setzen auf recycelte
-                                Materialien und faire Arbeitsbedingungen.
+                                Jedes Kleidungsstück erzählt eine Geschichte – von der Gewinnung der Rohstoffe bis hin zur Produktion.
+                                Baumwolle wird angebaut, geerntet und verarbeitet, oft unter enormem Wasserverbrauch und Einsatz von Pestiziden.
+                                Synthetische Stoffe entstehen aus Erdöl, einer begrenzten Ressource, die unwiederbringlich verloren geht.
+                                Während der Produktion entstehen zudem CO₂-Emissionen, die zur Erderwärmung beitragen.
+                                Auf unserer Webseite zeigen wir, wie viele Ressourcen durch die Herstellung eines einzigen Kleidungsstücks
+                                verloren gehen und wie nachhaltige Alternativen helfen können, diese Auswirkungen zu minimieren.
                             </p>
                         )}
                     </div>
