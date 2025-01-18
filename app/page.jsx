@@ -11,23 +11,165 @@ import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
 import { useState, useEffect, useCallback } from "react";
 
 
-// The JigsawPuzzleInfographic component
-const JigsawPuzzleInfographic = ({ onSolved }) => {
+// Puzzle-Teil-Komponente
+function PuzzlePiece({ id, imageSrc, correctPosition, onPlace }) {
+    const handleDragStart = (e) => {
+        e.dataTransfer.setData("pieceId", id); // ID des Puzzle-Teils speichern
+    };
+
     return (
-        <div className="jigsaw-puzzle-container">
-            <JigsawPuzzle
-                imageSrc="/infografik.svg"
-                rows={3}
-                columns={3}
-                onSolved={() => {
-                    // Entkopplung durch setTimeout
-                    setTimeout(() => onSolved(), 0);
-                }}
-                className="jigsaw-puzzle"
-            />
+        <div
+            draggable
+            onDragStart={handleDragStart}
+            style={{
+                width: "100px",
+                height: "100px",
+                backgroundImage: `url(${imageSrc})`,
+                backgroundSize: "300px 300px", // Setze die Größe für das gesamte Bild
+                backgroundPosition: correctPosition, // Position für das Teil
+                border: "1px solid black",
+                cursor: "grab",
+            }}
+        ></div>
+    );
+}
+
+// Puzzle-Feld-Komponente
+function PuzzleSlot({ id, correctPosition, placedPieces, onDrop }) {
+    const handleDrop = (e) => {
+        e.preventDefault();
+        const pieceId = parseInt(e.dataTransfer.getData("pieceId"), 10); // Hole die ID des gezogenen Teils
+        if (pieceId === id && !placedPieces.includes(pieceId)) {
+            onDrop(id, pieceId); // Nur dann platzieren, wenn es der richtige Slot ist und noch nicht platziert wurde
+        }
+    };
+
+    const handleDragOver = (e) => {
+        e.preventDefault(); // Erlaube das Ablegen
+    };
+
+    const isPlaced = placedPieces.includes(id); // Überprüfen, ob das Teil an dieser Stelle platziert wurde
+
+    return (
+        <div
+            onDrop={handleDrop}
+            onDragOver={handleDragOver}
+            style={{
+                width: "100px",
+                height: "100px",
+                border: "2px dashed gray",
+                display: "inline-block",
+                margin: "2px",
+                position: "relative", // Wichtiger Stil für die Positionierung des Puzzle-Teils
+            }}
+        >
+            {/* Zeige das Puzzle-Teil nur, wenn es korrekt platziert wurde */}
+            {isPlaced && (
+                <div
+                    style={{
+                        position: "absolute",
+                        width: "100px",
+                        height: "100px",
+                        backgroundImage: `url(/infografik.svg)`,
+                        backgroundSize: "300px 300px",
+                        backgroundPosition: correctPosition, // Position für das Teil
+                    }}
+                ></div>
+            )}
         </div>
     );
-};
+}
+
+// Puzzle-Logik-Komponente
+function JigsawPuzzleManual() {
+    const [placedPieces, setPlacedPieces] = useState([]); // IDs der korrekt platzierten Teile
+    const [isSolved, setIsSolved] = useState(false);
+
+    const messages = [
+        "Erstes Teil",
+        "Zweites Teil",
+        "Drittes Teil",
+        "Viertes Teil",
+        "Fünftes Teil",
+        "Sechstes Teil",
+        "Siebtes Teil",
+        "Achtes Teil",
+        "Neuntes Teil",
+    ];
+    
+
+    // Bild-Teile und Positionen
+    const pieces = [
+        { id: 0, position: "0px 0px" }, // Oben links
+        { id: 1, position: "-100px 0px" }, // Oben Mitte
+        { id: 2, position: "-200px 0px" }, // Oben rechts
+        { id: 3, position: "0px -100px" }, // Mitte links
+        { id: 4, position: "-100px -100px" }, // Mitte Mitte
+        { id: 5, position: "-200px -100px" }, // Mitte rechts
+        { id: 6, position: "0px -200px" }, // Unten links
+        { id: 7, position: "-100px -200px" }, // Unten Mitte
+        { id: 8, position: "-200px -200px" }, // Unten rechts
+    ];
+
+    const handleDrop = useCallback((slotId, pieceId) => {
+        setPlacedPieces((prev) => [...prev, pieceId]); // Füge das korrekte Teil hinzu
+    }, []);
+
+    // Überprüfe, ob alle Teile korrekt platziert wurden
+    useEffect(() => {
+        if (placedPieces.length === pieces.length) {
+            setIsSolved(true); // Puzzle ist vollständig
+        }
+    }, [placedPieces]);
+
+    return (
+        <div style={{ textAlign: "center" }}>
+            <h2>{isSolved ? "Herzlichen Glückwunsch! Puzzle gelöst!" : "Löse das Puzzle!"}</h2>
+            <div style={{ width: "300px", margin: "0 auto" }}>
+                {/* Puzzle-Slots */}
+                <div
+                    style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(3, 100px)",
+                        gap: "2px",
+                    }}
+                >
+                    {pieces.map((piece) => (
+                        <PuzzleSlot
+                            key={piece.id}
+                            id={piece.id}
+                            correctPosition={piece.position}
+                            placedPieces={placedPieces} // Übergabe des Zustands an die Slot-Komponente
+                            onDrop={handleDrop}
+                        />
+                    ))}
+                </div>
+
+                {/* Puzzle-Stücke */}
+                <div style={{ marginTop: "20px" }}>
+                    {pieces
+                        .filter((piece) => !placedPieces.includes(piece.id)) // Zeige nur ungelegte Teile
+                        .map((piece) => (
+                            <PuzzlePiece
+                                key={piece.id}
+                                id={piece.id}
+                                imageSrc="/infografik.svg"
+                                correctPosition={piece.position}
+                                onPlace={handleDrop}
+                            />
+                        ))}
+                </div>
+
+                {/* Vorbereitete Texte anzeigen */}
+                <div style={{ marginTop: "20px", textAlign: "left" }}>
+                    {placedPieces.map((_, index) => (
+                        <p key={index}>{messages[index]}</p>
+                    ))}
+                </div>
+            </div>
+        </div>
+    );
+}
 
 export default function Home() {
     const [text, setText] = useState("Solve the puzzle!!");
@@ -435,13 +577,7 @@ export default function Home() {
             </section>
 
 
-            <div>
-                {/* Infographic Section */}
-                <section className="infographic-section">
-                    <h2 className="tag">{text}</h2>
-                    <JigsawPuzzleInfographic onSolved={onSolved}/>
-                </section>
-            </div>
+            <JigsawPuzzleManual />
 
 
             {/* Unsere Wahl Section */
