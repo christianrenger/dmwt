@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link';
-import styles from '@/app/page.module.css'
+import './page.css';
 import { useState } from 'react';
 
 
@@ -53,33 +53,50 @@ export default function AddPost() {
   };
 
   return (
-    <main className={styles.main}>
-      <Link href={'/'}>Startseite</Link> <br />
-      <Link href={'/feed'}>View Feed</Link>
-      <h1>Add Post</h1>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="title">Title:</label>
-          <input
-            type="text"
-            id="title"
-            value={title}
-            onChange={handleTitleChange}
-            required
-          />
+    <div>
+      {/* Navigation Bar */}
+      <nav className="navbar">
+        <div className="logo">
+          <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon" />
+          <span>Revivo</span>
         </div>
-        <div>
-          <label htmlFor="content">Content:</label>
-          <textarea
-            id="content"
-            value={content}
-            onChange={handleContentChange}
-            required
-          />
+        <ul className="nav-links">
+          <li><Link href="/feed">Community-Feed</Link></li>
+          <li><a href="#startseite">Startseite</a></li>
+          <li><a href="#infografik">Infografik</a></li>
+          <li><a href="#unsere-wahl">Unsere Wahl</a></li>
+        </ul>
+      </nav>
+  
+      <div className="logincontainer">
+        <div className="form-wrapper">
+          <h1>Add Post</h1>
+          {error && <p style={{ color: 'red' }}>{error}</p>}
+          <form onSubmit={handleSubmit}>
+            <div className="form-group">
+              <label htmlFor="title">Title:</label>
+              <input
+                type="text"
+                id="title"
+                value={title}
+                onChange={handleTitleChange}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label htmlFor="content">Content:</label>
+              <textarea
+                id="content"
+                value={content}
+                onChange={handleContentChange}
+                required
+              ></textarea>
+            </div>
+            <button type="submit">Submit</button>
+          </form>
         </div>
-        <button type="submit">Submit</button>
-      </form>
-    </main>
+      </div>
+    </div>
   );
+  
 }
