@@ -68,7 +68,7 @@ body {
 
 .wave {
   --size: 50px;
-  --b: 3px;
+  --b: 1px;
   --m: 0.6;
   --p: calc(var(--m)*var(--size));
   --R: calc(var(--size)*sqrt(var(--m)*var(--m) + 1) + var(--b)/2);
@@ -82,7 +82,6 @@ body {
   background: linear-gradient(90deg, #000000, #384c30);
   height: 300px;
 }
-
 
 /* Hero Section */
 .hero {
@@ -113,10 +112,11 @@ body {
 }
 .hero .wave {
   position: absolute;
-  bottom: 0;
+  bottom: 77%;
   left: 0;
-  width: 100%;
-  z-index: 0; /* Place it behind the content */
+  width: 79%;
+  height: 200px; /* Set a shorter height */
+  z-index: 0.2; /* Place it behind the content */
 }
 
 .cta-button {
@@ -136,11 +136,9 @@ body {
   overflow: hidden;
   transition: all 0.5s ease;
   padding: 0 10px; /* Platz schaffen für den Text */
-  background-color: #f9ebd8; /* Helle Hintergrundfarbe */
-  border: 1px solid #e0e0e0; /* Sanfter Rahmen */
+  background-color: rgba(249, 235, 216, 40%);
   border-radius: 8px; /* Abgerundete Ecken */
   margin-top: 20px; /* Abstand zum Button */
-
 }
 
 .cta-info.visible {
