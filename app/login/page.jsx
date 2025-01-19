@@ -60,17 +60,22 @@ export default function LoginPage() {
 
   return (
 
-  <div>
+    <div>
     <nav className="navbar">
-      <div className="logo">
-       <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon" />
+     
+        <div className="logo">
+        <Link href="/">
+        <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon" />
+        </Link>
         <span>Revivo</span>
-     </div>
+      </div>
+     
+
      <ul className="nav-links">
        <li><Link href="/feed">Community-Feed</Link></li>
-       <li><a href="#startseite">Startseite</a></li>
-       <li><a href="#infografik">Infografik</a></li>
-       <li><a href="#unsere-wahl">Unsere Wahl</a></li>
+       <li><a href="/#infografik">Infografik</a></li>
+       <li><a href="/#unsere-wahl">Unsere Wahl</a></li>
+       <li><Link href="/login">Login</Link></li>
      </ul>
     </nav>
   

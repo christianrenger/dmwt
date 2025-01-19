@@ -435,16 +435,19 @@ export default function Home() {
     }, []);
 
     return (
-        <div>
-            <nav className="navbar">
-                <div className="logo">
-                    <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon"/>
-                    <span>Revivo</span>
-                </div>
+    <div>
+        <nav className="navbar">
+            <div className="logo">
+                <Link href="/">
+                <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon" />
+                </Link>
+            <span>Revivo</span>
+            </div>
                 <ul className="nav-links">
                     <Link href={'/feed'}>Community-Feed</Link>
                     <li><a href="#infografik">Infografik</a></li>
                     <li><a href="#unsere-wahl">Unsere Wahl</a></li>
+                    <Link href={'/login'}>Login</Link>
                 </ul>
             </nav>
 
@@ -700,9 +703,9 @@ export default function Home() {
                 </div>
             </section>
 
-
-            <JigsawPuzzleManual />
-
+            <section id="infografik">
+                <JigsawPuzzleManual />
+            </section>
 
             {/* Unsere Wahl Section */
             }
