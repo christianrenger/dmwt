@@ -1,4 +1,5 @@
 "use client";
+import Head from 'next/head'
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState, useEffect, useCallback } from "react";
@@ -247,6 +248,7 @@ function JigsawPuzzleManual() {
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
+            <Head> <title>Revivo</title> </Head>
             {/* Left part: Puzzle */}
             <div style={{ width: `${imageWidth}px`, margin: "0 20px" }}>
                 <h2>{isSolved ? "Herzlichen Glückwunsch! Puzzle gelöst!" : "Löse das Puzzle!"}</h2>
@@ -800,25 +802,25 @@ export default function Home() {
                                 <div className="foo">
                                     <div className="single-number green-box">
                                         <span className="digit-box" data-val="120">000</span>
-                                        <span className="text-box">Different Locations</span>
+                                        <span className="text-box">Community Mitglieder</span>
                                     </div>
                                 </div>
                                 <div className="foo">
                                     <div className="single-number blue-box">
                                         <span className="digit-box" data-val="090">000</span>
-                                        <span className="text-box">Awards Won</span>
+                                        <span className="text-box">Erstellte Beiträge</span>
                                     </div>
                                 </div>
                                 <div className="foo">
                                     <div className="single-number red-box">
                                         <span className="digit-box" data-val="055">000</span>
-                                        <span className="text-box">Projects Done</span>
+                                        <span className="text-box">Benutzer online</span>
                                     </div>
                                 </div>
                                 <div className="foo">
                                     <div className="single-number purple-box">
                                         <span className="digit-box" data-val="125">000</span>
-                                        <span className="text-box">Happy Clients</span>
+                                        <span className="text-box">Gemeinsame Stunden</span>
                                     </div>
                                 </div>
                             </div>

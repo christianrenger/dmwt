@@ -95,18 +95,18 @@ export default function LoginPage() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               required
-              placeholder="Enter your username"
+              placeholder="Username eingeben"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password:</label>
+            <label htmlFor="password">Passwort:</label>
             <input
               type="password"
               id="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
-              placeholder="Enter your password"
+              placeholder="Passwort eingeben"
             />
           </div>
           <button type="submit" className="btn">Login</button>
@@ -114,7 +114,7 @@ export default function LoginPage() {
       </div>
 
       <div className="form-wrapper">
-        <h2>Register</h2>
+        <h2>Registrieren</h2>
         <form onSubmit={handleRegister}>
           <div className="form-group">
             <label htmlFor="new-username">Username:</label>
@@ -124,21 +124,21 @@ export default function LoginPage() {
               value={newUsername}
               onChange={(e) => setNewUsername(e.target.value)}
               required
-              placeholder="Choose a username"
+              placeholder="Wähle einen Username"
             />
           </div>
           <div className="form-group">
-            <label htmlFor="new-password">Password:</label>
+            <label htmlFor="new-password">Passwort:</label>
             <input
               type="password"
               id="new-password"
               value={newPassword}
               onChange={(e) => setNewPassword(e.target.value)}
               required
-              placeholder="Choose a password"
+              placeholder="Wähle ein Passwort"
             />
           </div>
-          <button type="submit" className="btn">Register</button>
+          <button type="submit" className="btn">Registrieren</button>
         </form>
       </div>
     </div>

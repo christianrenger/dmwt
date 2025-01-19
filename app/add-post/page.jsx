@@ -65,17 +65,17 @@ export default function AddPost() {
           <li><Link href="/feed">Community-Feed</Link></li>
           <li><a href="/#infografik">Infografik</a></li>
           <li><a href="/#unsere-wahl">Unsere Wahl</a></li>
-          <li><Link href="/Login">Login</Link></li>
+          <li><Link href="/login">Login</Link></li>
         </ul>
       </nav>
   
       <div className="logincontainer">
         <div className="form-wrapper">
-          <h1>Add Post</h1>
+          <h1>Post hinzufügen</h1>
           {error && <p style={{ color: 'red' }}>{error}</p>}
           <form onSubmit={handleSubmit}>
             <div className="form-group">
-              <label htmlFor="title">Title:</label>
+              <label htmlFor="title">Titel:</label>
               <input
                 type="text"
                 id="title"
@@ -85,7 +85,7 @@ export default function AddPost() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="content">Content:</label>
+              <label htmlFor="content">Inhalt:</label>
               <textarea
                 id="content"
                 value={content}
@@ -93,7 +93,7 @@ export default function AddPost() {
                 required
               ></textarea>
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit">Posten</button>
           </form>
         </div>
       </div>
