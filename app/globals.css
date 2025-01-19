@@ -217,7 +217,7 @@ body {
 }
 .hero-square4 {
   position: absolute;
-  bottom: 100px; /* Vertikal zentrieren */
+  bottom: 83px; /* Vertikal zentrieren */
   left: 0px; /* Horizontal zentrieren */
   width: 250px; /* Größe des Quadrats */
   height: 250px; /* Größe des Quadrats */
