@@ -98,15 +98,15 @@ function JigsawPuzzleManual() {
     const slotWidth = imageWidth / gridSize; 
 
     const messages = [
-        "Erstes Teil eingefügt!",
-        "Zweites Teil eingefügt!",
-        "Drittes Teil eingefügt!",
-        "Viertes Teil eingefügt!",
-        "Fünftes Teil eingefügt!",
-        "Sechstes Teil eingefügt!",
-        "Siebtes Teil eingefügt!",
-        "Achtes Teil eingefügt!",
-        "Neuntes Teil eingefügt!",
+        "10.000 Liter Wasser werden benötigt, um 1 kg Baumwolle zu produzieren – genug für etwa eine Jeans und ein T-Shirt.",
+        "Die Modeindustrie erzeugt jährlich 1,2 Milliarden Tonnen CO₂ – mehr als die internationalen Flüge und die Schifffahrt zusammen.",
+        "Bis zu 8.000 verschiedene Chemikalien werden in der Textilproduktion verwendet, z. B. Farbstoffe, Weichmacher und Bleichmittel.",
+        "Jährlich werden etwa 92 Millionen Tonnen Textilabfälle erzeugt.",
+        "Polyester, das am häufigsten in Fast Fashion verwendet wird, besteht aus fossilen Brennstoffen. Für 1 kg Polyester werden etwa 70 Millionen Barrel Öl pro Jahr verbraucht.",
+        "Mikroplastik: Waschmaschinen setzen bei jedem Waschgang Mikrofasern frei. 35 % der Mikroplastikverschmutzung im Meer stammt aus synthetischer Kleidung.",
+        "Etwa 2,5 % der weltweiten Ackerfläche wird für den Baumwollanbau genutzt, oft auf Kosten von Lebensmitteln und natürlichen Lebensräumen.",
+        "Nur 1 % der Kleidung wird recycelt, um neue Kleidung herzustellen – der Rest landet auf Deponien oder wird verbrannt.",
+        "Die Modeindustrie ist für etwa 20 % des weltweiten Abwassers verantwortlich.",
     ];
 
     const pieces = [
