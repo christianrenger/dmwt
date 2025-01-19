@@ -326,35 +326,6 @@ export default function Home() {
                 </ul>
             </nav>
 
-            {/* Hero Section */}
-            {/*<header id="startseite" className="hero">*/}
-            {/*    <div className="hero-square1">*/}
-            {/*        <span className="square-text"></span>*/}
-            {/*    </div>*/}
-            {/*    <div className="hero-square4">*/}
-            {/*        <span className="square-text"></span>*/}
-            {/*    </div>*/}
-
-
-            {/*    <div className="hero-content">*/}
-            {/*        <h1>Trage, Was Die Welt Verändert!</h1>*/}
-            {/*        <p>*/}
-            {/*            „Jeder Kauf ist ein kleiner Schritt in Richtung einer nachhaltigeren Zukunft. Werde Teil der*/}
-            {/*            Veränderung!“*/}
-            {/*        </p>*/}
-            {/*        <button className="cta-button">Mehr Informationen</button>*/}
-            {/*    </div>*/}
-            {/*    <div className="wave"></div>*/}
-            {/*    <div className="hero-image">*/}
-            {/*        <Image*/}
-            {/*            src="/frau.jpg"*/}
-            {/*            alt="Frau mit gelbem Kleid"*/}
-            {/*            width={400}*/}
-            {/*            height={500}*/}
-            {/*        />*/}
-            {/*    </div>*/}
-
-
             {/*</header>*/}
             <div>
                 <header className="hero">
