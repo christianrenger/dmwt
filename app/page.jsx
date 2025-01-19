@@ -1,13 +1,7 @@
-// "use client";
-// import Image from 'next/image';
-// import Link from 'next/link';
-// import {useState, useEffect} from "react";
-
 "use client";
 import Image from 'next/image';
 import Link from 'next/link';
-// import { JigsawPuzzle } from "react-jigsaw-puzzle/lib";
-// import "react-jigsaw-puzzle/lib/jigsaw-puzzle.css";
+
 import { useState, useEffect, useCallback } from "react";
 
 
