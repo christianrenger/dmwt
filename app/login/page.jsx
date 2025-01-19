@@ -1,5 +1,8 @@
 'use client'
-import { useState } from 'react'
+import { useState } from 'react';
+
+import './page.css';
+import Link from 'next/link';
 
 export default function LoginPage() {
   const [username, setUsername] = useState('')
@@ -56,25 +59,84 @@ export default function LoginPage() {
   }
 
   return (
-    <div>
-      <h2>Login</h2>
-      {error && <p style={{color: 'red'}}>{error}</p>}
-      <form onSubmit={handleLogin}>
-        <label htmlFor="username">Username:</label><br />
-        <input type="text" id="username" value={username} onChange={(e) => setUsername(e.target.value)} required /><br />
-        <label htmlFor="password">Password:</label><br />
-        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required /><br /><br />
-        <button type="submit">Login</button>
-      </form>
 
-      <h2>Register</h2>
-      <form onSubmit={handleRegister}>
-        <label htmlFor="new-username">Username:</label><br />
-        <input type="text" id="new-username" value={newUsername} onChange={(e) => setNewUsername(e.target.value)} required /><br />
-        <label htmlFor="new-password">Password:</label><br />
-        <input type="password" id="new-password" value={newPassword} onChange={(e) => setNewPassword(e.target.value)} required /><br /><br />
-        <button type="submit">Register</button>
-      </form>
+  <div>
+    <nav className="navbar">
+      <div className="logo">
+       <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon" />
+        <span>Revivo</span>
+     </div>
+     <ul className="nav-links">
+       <li><Link href="/feed">Community-Feed</Link></li>
+       <li><a href="#startseite">Startseite</a></li>
+       <li><a href="#infografik">Infografik</a></li>
+       <li><a href="#unsere-wahl">Unsere Wahl</a></li>
+     </ul>
+    </nav>
+  
+
+            
+    <div className="logincontainer">
+      <div className="form-wrapper">
+      
+        <h2>Login</h2>
+        {error && <p className="error-message">{error}</p>}
+        <form onSubmit={handleLogin}>
+          <div className="form-group">
+            <label htmlFor="username">Username:</label>
+            <input
+              type="text"
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              required
+              placeholder="Enter your username"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+              placeholder="Enter your password"
+            />
+          </div>
+          <button type="submit" className="btn">Login</button>
+        </form>
+      </div>
+
+      <div className="form-wrapper">
+        <h2>Register</h2>
+        <form onSubmit={handleRegister}>
+          <div className="form-group">
+            <label htmlFor="new-username">Username:</label>
+            <input
+              type="text"
+              id="new-username"
+              value={newUsername}
+              onChange={(e) => setNewUsername(e.target.value)}
+              required
+              placeholder="Choose a username"
+            />
+          </div>
+          <div className="form-group">
+            <label htmlFor="new-password">Password:</label>
+            <input
+              type="password"
+              id="new-password"
+              value={newPassword}
+              onChange={(e) => setNewPassword(e.target.value)}
+              required
+              placeholder="Choose a password"
+            />
+          </div>
+          <button type="submit" className="btn">Register</button>
+        </form>
+      </div>
     </div>
-  )
+    </div>
+  );
 }

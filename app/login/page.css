@@ -1,0 +1,82 @@
+/* Setze die gesamte Breite für die Navigationsleiste */
+
+
+
+
+
+
+/* Setze die Basis für den gesamten Body */
+body {
+  font-family: Libre Baskerville, serif;
+  
+  align-items: center;
+  
+  margin: 0; /* Entferne die Standard-Margins */
+  
+  
+}
+
+/* Container für das Formular */
+.logincontainer {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #faffe7;
+  border-radius: 8px;
+  
+  
+}
+
+.form-wrapper {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Gemeinsame Stile für die Formulare */
+.form-wrapper h2 {
+  
+  text-align: center;
+  color: #333;
+}
+
+.form-wrapper form {
+  display: flex;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Abstand zwischen den Feldern */
+}
+
+/* Eingabefelder */
+.form-wrapper input {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Buttons für Login und Registrierung */
+button {
+  background-color: #4F633F;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-Size: 19px;
+  border-Radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+
+
+
+
+
+

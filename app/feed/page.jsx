@@ -70,7 +70,7 @@ export default function Home() {
           title={post.title}
           content={post.content}
           username={post.author.username}
-          loggedInUsername={user?.username} // Use the fetched user's username
+          loggedInUsername={user?.username} 
         />
       ))}
     </main>
