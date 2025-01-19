@@ -1,0 +1,88 @@
+/* Setze die Basis für den gesamten Body */
+body {
+    font-family: Libre Baskerville, serif;
+    
+    align-items: center;
+    
+    margin: 0; /* Entferne die Standard-Margins */
+    
+    
+  }
+  
+  /* Container für das Formular */
+  .logincontainer {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #faffe7;
+    border-radius: 8px;
+    
+    
+  }
+  
+  .form-wrapper {
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Gemeinsame Stile für die Formulare */
+  .form-wrapper h2 {
+    
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-wrapper form {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+  }
+  
+  
+  .form-wrapper input {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  .feedheader {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    margin-bottom: 15px; 
+  }
+
+  .feedheader h1 {
+    margin: 0; 
+  }
+
+  .loginaufforderung {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 19px;
+    
+  }
+  
+  
+  /* Buttons für Login und Registrierung */
+  button {
+    background-color: #4F633F;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-Size: 19px;
+    border-Radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  

@@ -16,6 +16,6 @@ export default function DeletePostButton({postId}){
     }
 
     return (
-        <button onClick={handleClick}>Delete Post</button>
+        <button onClick={handleClick}>Post löschen</button>
     )
 }

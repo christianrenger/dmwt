@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link';
 import Post from '../components/Post';
-import styles from '../page.module.css';
+import './page.css'
 import { useState, useEffect } from 'react';
 
 async function fetchUser() {
@@ -58,21 +58,49 @@ export default function Home() {
   }, []);
 
   return (
-    <main className={styles.main}>
-      <Link href={'/'}>Startseite</Link> <br />
-      <Link href={'/login'}>Login</Link> <br />
-      <Link href={'/add-post'}>Add Post</Link>
-      <h1>Feed</h1>
-      {posts.map((post) => (
-        <Post
-          key={post.id}
-          id={post.id}
-          title={post.title}
-          content={post.content}
-          username={post.author.username}
-          loggedInUsername={user?.username} 
-        />
-      ))}
+
+    <div>
+    <nav className="navbar">
+      <div className="logo">
+       <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon" />
+        <span>Revivo</span>
+     </div>
+     <ul className="nav-links">
+       <li><Link href="/feed">Community-Feed</Link></li>
+       <li><a href="#startseite">Startseite</a></li>
+       <li><a href="#infografik">Infografik</a></li>
+       <li><a href="#unsere-wahl">Unsere Wahl</a></li>
+     </ul>
+    </nav>
+    <main className="logincontainer">
+      {/* Navigation Links */}
+      
+  
+      {/* Feed Section */}
+      <div className="form-wrapper">
+        <div className="feedheader">
+        <h1>Community-Feed</h1>
+        <Link href="/add-post"><button>Poste etwas</button></Link>
+        </div>
+
+        {!user && (
+    <div className="loginaufforderung">
+      <Link href="/login"><button>Login</button></Link> um Posts zu schreiben oder zu löschen.
+    </div>
+  )}
+        {posts.map((post) => (
+          <Post
+            key={post.id}
+            id={post.id}
+            title={post.title}
+            content={post.content}
+            username={post.author.username}
+            loggedInUsername={user?.username}
+          />
+        ))}
+      </div>
     </main>
+    </div>
   );
+  
 }
