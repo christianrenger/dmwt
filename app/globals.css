@@ -522,6 +522,23 @@ button:hover {
   transform: scale(1.05);
 }
 
+/*infografik text boxes*/
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Starts slightly below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Ends at its original position */
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out forwards; /* Ensures the element stays visible after animation */
+}
+
+
 
 
 
