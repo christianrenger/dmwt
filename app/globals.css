@@ -12,9 +12,6 @@ body {
   scroll-behavior: smooth;
   cursor: url("icons8-tshirt-32.png") 32 32,auto;
 }
-
-
-
 /* Navbar */
 .navbar {
   display: flex;

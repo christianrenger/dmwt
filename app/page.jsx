@@ -83,6 +83,123 @@ function PuzzleSlot({ id, correctPosition, placedPieces, onDrop, slotWidth, aspe
     );
 }
 
+
+//
+//
+// function JigsawPuzzleManual() {
+//     const [placedPieces, setPlacedPieces] = useState([]);
+//     const [isSolved, setIsSolved] = useState(false);
+//
+//     const imageSrc = "/infografik.svg";
+//     const imageWidth = 346.6;
+//     const imageHeight = 600;
+//     const gridSize = 3;
+//     const aspectRatio = imageHeight / imageWidth;
+//     const slotWidth = imageWidth / gridSize;
+//
+//     const messages = [
+//         "10.000 Liter Wasser werden benötigt, um 1 kg Baumwolle zu produzieren – genug für etwa eine Jeans und ein T-Shirt.",
+//         "Die Modeindustrie erzeugt jährlich 1,2 Milliarden Tonnen CO₂ – mehr als die internationalen Flüge und die Schifffahrt zusammen.",
+//         "Bis zu 8.000 verschiedene Chemikalien werden in der Textilproduktion verwendet, z. B. Farbstoffe, Weichmacher und Bleichmittel.",
+//         "Jährlich werden etwa 92 Millionen Tonnen Textilabfälle erzeugt.",
+//         "Polyester, das am häufigsten in Fast Fashion verwendet wird, besteht aus fossilen Brennstoffen. Für 1 kg Polyester werden etwa 70 Millionen Barrel Öl pro Jahr verbraucht.",
+//         "Mikroplastik: Waschmaschinen setzen bei jedem Waschgang Mikrofasern frei. 35 % der Mikroplastikverschmutzung im Meer stammt aus synthetischer Kleidung.",
+//         "Etwa 2,5 % der weltweiten Ackerfläche wird für den Baumwollanbau genutzt, oft auf Kosten von Lebensmitteln und natürlichen Lebensräumen.",
+//         "Nur 1 % der Kleidung wird recycelt, um neue Kleidung herzustellen – der Rest landet auf Deponien oder wird verbrannt.",
+//         "Die Modeindustrie ist für etwa 20 % des weltweiten Abwassers verantwortlich.",
+//     ];
+//
+//     const pieces = [
+//         { id: 0, position: "0% 0%" },
+//         { id: 1, position: "50% 0%" },
+//         { id: 2, position: "100% 0%" },
+//         { id: 3, position: "0% 50%" },
+//         { id: 4, position: "50% 50%" },
+//         { id: 5, position: "100% 50%" },
+//         { id: 6, position: "0% 100%" },
+//         { id: 7, position: "50% 100%" },
+//         { id: 8, position: "100% 100%" },
+//     ];
+//
+//     const handleDrop = useCallback((slotId, pieceId) => {
+//         setPlacedPieces((prev) => [...prev, pieceId]);
+//     }, []);
+//
+//     useEffect(() => {
+//         if (placedPieces.length === pieces.length) {
+//             setIsSolved(true);
+//         }
+//     }, [placedPieces]);
+//
+//     return (
+//         <div style={{ textAlign: "center" }}>
+//             <h2>{isSolved ? "Herzlichen Glückwunsch! Puzzle gelöst!" : "Löse das Puzzle!"}</h2>
+//             <div style={{ width: `${imageWidth}px`, margin: "0 auto" }}>
+//                 {/* Puzzle-Slots */}
+//                 <div
+//                     style={{
+//                         display: "grid",
+//                         gridTemplateColumns: `repeat(${gridSize}, ${slotWidth}px)`,
+//                         gap: "0",
+//                     }}
+//                 >
+//                     {pieces.map((piece) => (
+//                         <PuzzleSlot
+//                             key={piece.id}
+//                             id={piece.id}
+//                             correctPosition={piece.position}
+//                             placedPieces={placedPieces}
+//                             onDrop={handleDrop}
+//                             slotWidth={slotWidth}
+//                             aspectRatio={aspectRatio}
+//                             imageSrc={imageSrc}
+//                         />
+//                     ))}
+//                 </div>
+//
+//                 {/* Puzzle-Stücke */}
+// <div style={{
+//         marginTop: "20px",
+//         display: "grid",
+//         gridTemplateColumns: "repeat(5, 100px)", // 5 Teile pro Zeile
+//         gridAutoRows: "200px",
+//         gap: "20px",
+//         justifyContent: "center",
+//     }}
+//
+//     >
+//
+//     {pieces
+//         .filter((piece) => !placedPieces.includes(piece.id)) // Zeige nur ungelegte Teile
+//         .sort((a, b) => {
+//
+//             const containerOrder = [3, 1, 6, 0, 4, 7, 2, 5, 8];
+//             return containerOrder.indexOf(a.id) - containerOrder.indexOf(b.id);
+//         })
+//         .map((piece, index) => (
+//             <PuzzlePiece
+//                 key={piece.id}
+//                 id={piece.id}
+//                 imageSrc={imageSrc}
+//                 correctPosition={piece.position}
+//                 slotWidth={slotWidth}
+//                 aspectRatio={aspectRatio}
+//             />
+//         ))}
+// </div>
+//
+//
+//                 {/* Vorbereitete Texte anzeigen */}
+//                 <div style={{ marginTop: "20px", textAlign: "left" }}>
+//                     {placedPieces.map((_, index) => (
+//                         <p key={index}>{messages[index]}</p>
+//                     ))}
+//                 </div>
+//             </div>
+//         </div>
+//     );
+// }
+
 function JigsawPuzzleManual() {
     const [placedPieces, setPlacedPieces] = useState([]);
     const [isSolved, setIsSolved] = useState(false);
@@ -213,6 +330,10 @@ function JigsawPuzzleManual() {
 }
 
 
+
+
+
+
 export default function Home() {
     
     const [ctaInfoVisible, setCtaInfoVisible] = useState(false);
@@ -322,7 +443,6 @@ export default function Home() {
                 </div>
                 <ul className="nav-links">
                     <Link href={'/feed'}>Community-Feed</Link>
-                    <li><a href="#startseite">Startseite</a></li>
                     <li><a href="#infografik">Infografik</a></li>
                     <li><a href="#unsere-wahl">Unsere Wahl</a></li>
                 </ul>
@@ -650,6 +770,7 @@ export default function Home() {
                     <div className="community-section" style={{textAlign: "center", marginTop: "20px"}}>
                         <p style={{fontSize: "25px", color: "black", fontWeight: "bold"}}>Sei Teil unserer
                             Community!</p>
+                        <Link href="/login">
                         <button
                             style={{
                                 backgroundColor: "#4F633F",
@@ -666,6 +787,7 @@ export default function Home() {
                         >
                             Jetzt Registrieren
                         </button>
+                        </Link>
                     </div>
 
 
