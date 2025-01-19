@@ -62,12 +62,13 @@ export default function Home() {
     <div>
     <nav className="navbar">
      
-        <div className="logo">
-        <Link href="/">
-        <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon" />
-        </Link>
-        <span>Revivo</span>
-      </div>
+    <div className="logo">
+                <Link href="/">
+                <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon static" />
+                <img src="/logoss.gif" alt="Revivo Logo" className="logo-icon animated" />
+                </Link>
+            <span>Revivo</span>
+            </div>
      
      
 

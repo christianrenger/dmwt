@@ -55,9 +55,10 @@ export default function AddPost() {
   return (
     <div>
         <nav className="navbar">
-            <div className="logo">
+        <div className="logo">
                 <Link href="/">
-                <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon" />
+                <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon static" />
+                <img src="/logoss.gif" alt="Revivo Logo" className="logo-icon animated" />
                 </Link>
             <span>Revivo</span>
             </div>

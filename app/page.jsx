@@ -248,7 +248,6 @@ function JigsawPuzzleManual() {
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'flex-start' }}>
-            <Head> <title>Revivo</title> </Head>
             {/* Left part: Puzzle */}
             <div style={{ width: `${imageWidth}px`, margin: "0 20px" }}>
                 <h2>{isSolved ? "Herzlichen Glückwunsch! Puzzle gelöst!" : "Löse das Puzzle!"}</h2>
@@ -441,7 +440,8 @@ export default function Home() {
         <nav className="navbar">
             <div className="logo">
                 <Link href="/">
-                <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon" />
+                <img src="/logoo.svg" alt="Revivo Logo" className="logo-icon static" />
+                <img src="/logoss.gif" alt="Revivo Logo" className="logo-icon animated" />
                 </Link>
             <span>Revivo</span>
             </div>

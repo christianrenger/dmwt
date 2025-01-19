@@ -39,18 +39,42 @@ body {
   font-size: 1rem;
 }
 
+/* Container für das Logo */
 .logo {
   display: flex;
-  align-items: center; /* Aligns the logo and text vertically */
-  gap: 10px; /* Adds spacing between the logo and the text */
+  align-items: center; /* Vertikale Ausrichtung */
+  gap: 10px; /* Abstand zwischen Logo und Text */
   font-size: 1.5rem;
   font-weight: bold;
+  position: relative;
 }
 
+/* Gemeinsame Styles für das Logo-Bild */
 .logo-icon {
-  width: 70px; /* Adjust the size of your logo */
-  height: auto; /* Maintain aspect ratio */
+  width: 80px; /* Größe des Logos */
+  height: auto; /* Verhältnismäßige Höhe */
+  display: block;
 }
+
+/* Verstecke das animierte GIF standardmäßig */
+.logo-icon.animated {
+  display: none;
+}
+
+/* Zeige das statische Bild standardmäßig */
+.logo-icon.static {
+  display: block;
+}
+
+/* Bei Hover das statische Bild ausblenden und das GIF anzeigen */
+.logo:hover .static {
+  display: none;
+}
+
+.logo:hover .animated {
+  display: block;
+}
+
 
 /* Styling for wave background */
 .wave-container {
