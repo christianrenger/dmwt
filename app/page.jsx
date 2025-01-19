@@ -305,7 +305,7 @@ function JigsawPuzzleManual() {
             <div style={{
                 marginTop: "20px",
                 textAlign: "left",
-                maxWidth: '600px', // Limit the text width
+                maxWidth: '700px', // Limit the text width
                 padding: '10px',
                 overflowY: 'auto'  // Enable scrolling if necessary
             }}>
@@ -316,9 +316,9 @@ function JigsawPuzzleManual() {
                         style={{
                             margin: "10px 0",
                             padding: "10px",
-                            border: "1px solid red", // Border color
-                            borderRadius: "50px",
-                            backgroundColor: "lightblue", // Background color
+                            border: "1px solid green", // Border color
+                            borderRadius: "30px",
+                            backgroundImage: 'url("Rectangle 28.svg")', // Background color
                         }}
                     >
                         {messages[index]}
