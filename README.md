@@ -23,6 +23,9 @@ Counter Element: https://codepen.io/r-i-c-h/pen/BaXGZXx
 
 Wellen Elemente im Hintergrund: https://css-tricks.com/how-to-create-wavy-shapes-patterns-in-css/
 
+Bild für Puzzle (mit anderen Farben nachgezeichnet): https://www.shutterstock.com/image-vector/fashion-infographic-template-model-symbol-made-730587343
+(wir haben eine Lizenz für das Bild)
+
 Für die Datenbankanbindung haben wir Vercel unter Anleitung von folgendem Video genutzt: https://www.youtube.com/watch?v=GxUR4zIasB8
 
 (Ehemalige Puzzle Logik: https://www.geeksforgeeks.org/puzzle-using-react-jigsaw-puzzle-package/)
