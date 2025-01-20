@@ -1,36 +1,28 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Revivo
 
-## Getting Started
+Revivo ist eine Webanwendung, die darauf abzielt, Nutzer für das Thema Sustainable Fashion zu sensibilisieren. Sie bietet nicht nur wertvolle Informationen und Einblicke in nachhaltige Mode, sondern ermöglicht es den Nutzern auch, sich in einer lebendigen Community auszutauschen und gemeinsam Lösungen für eine umweltbewusste Modewelt zu finden.
 
-First, run the development server:
+## Technologien & Bibliotheken
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Dieses Projekt verwendet eine Reihe von Tools und Bibliotheken, um eine robuste Webanwendung zu gewährleisten. Die verwendeten Bibliotheken sind:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **jsonwebtoken**: Für Tokens welche Login möglich machen   *npm install jsonwebtoken*
+- **bcryptjs**: Für Verschlüsselung der Passwörter           *npm install bcryptjs*
+- **prisma**: Für die Datenbank                              *Installation im unten gezeigten Video*
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Fremdmaterial und generierte Inhalte
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Zusätzlich wurden Teile des Codes und der Architektur mit der Unterstützung von verschiedenen KI Tools (vorwiegend ChatGPT) erstellt, um Lösungen für verschiedene Herausforderungen zu finden, die während der Entwicklung auftraten.
+Im Designbereich (CSS Dateien) wurde ebenfalls teilweise auf KI zurückgegriffen (hauptsächlich für Login, Feed und Add-Post)
 
-## Learn More
+Die Bilder für die Reise eines Kleidungsstücks wurden von einem KI Tool generiert (Recraft.ai)
 
-To learn more about Next.js, take a look at the following resources:
+das Hero Bild : https://www.missmoss.co.za/2015/06/botanical-resort/
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Counter Element: https://codepen.io/r-i-c-h/pen/BaXGZXx
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Wellen Elemente im Hintergrund: https://css-tricks.com/how-to-create-wavy-shapes-patterns-in-css/
 
-## Deploy on Vercel
+Für die Datenbankanbindung haben wir Vercel unter Anleitung von folgendem Video genutzt: https://www.youtube.com/watch?v=GxUR4zIasB8
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+(Ehemalige Puzzle Logik: https://www.geeksforgeeks.org/puzzle-using-react-jigsaw-puzzle-package/)
